@@ -1,0 +1,129 @@
+/*----IMPORTING-FONTS----*/
+
+@font-face {
+    font-family: "Back to the future 2002";
+    src: url(Font/BTTF.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Saira";
+    src: url(Font/Saira_2.ttf) format("truetype");
+}
+
+
+/*----ROOT-VARIABLES----*/
+:root {
+    --bs-title-font-family: "Back to the future 2002";
+    --bs-body-font-family: "Saira";
+
+    --bs-blue: #0A0B1A;
+    --bs-white: #FFFEE9;
+    --bs-azure: #31DEE5;
+    --bs-yellow: #FFFB40;
+    --bs-violet: #D62EE6;
+
+    --bs-body-bg: var(--bs-blue);
+    --bg-body-tertiary: var(--bs-white);
+
+    --bs-body-color: var(--bs-white);
+}
+
+
+/*----BODY-STYLES----*/
+body {
+  background-color: var(--bs-blue);
+
+}
+
+ /*----BACKGROUND-ANIMATION----*/
+.bg-noise {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('../img/bg_noise.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.5s infinite;
+  opacity: 0.2;
+  visibility: visible;
+  z-index: -1;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+
+/*----TEXT-SIZE----*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bs-title-font-family);
+}
+
+h1 {
+  font: 3.4375rem var(--bs-title-font-family);
+}
+
+h2 {
+  font: 2.8125rem var(--bs-title-font-family);
+}
+
+h3 {
+  font: 2.1875rem var(--bs-title-font-family);
+}
+
+h4 {
+  font: 1.5625rem var(--bs-title-font-family);
+}
+
+p {
+  font: 1.375rem var(--bs-body-font-family);
+}
+
+
+/*----CHANGES-NAVBAR----*/
+.navbar-brand {
+    width: 15vw;
+    padding-left: 2rem;
+}
+
+.navbar{
+    border-radius: 0 0 20px 20px;
+}
+
+.navbar-nav{
+    --bs-navbar-nav-link-padding-x: 2rem;
+}
+
+.nav-item{
+    font: 1.375rem var(--bs-body-font-family);
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active{
+    text-shadow: 0px 0px 5px var(--bs-azure),
+                 0px 0px 10px var(--bs-azure),
+                 0px 0px 15px var(--bs-azure),
+                 0px 0px 20px var(--bs-azure);
+}
+
+.navbar-nav .nav-link:hover{
+    text-shadow: 0px 0px 5px var(--bs-violet),
+                 0px 0px 10px var(--bs-violet),
+                 0px 0px 15px var(--bs-violet),
+                 0px 0px 20px var(--bs-violet);
+    
+    transition: text-shadow 0.5s ease-in-out;
+}
