@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "Back to the future 2002";
-    src: url(Font/BTTF.ttf) format("truetype");
+    src: url(../font/BTTF.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Saira";
-    src: url(Font/Saira_2.ttf) format("truetype");
+    src: url(../font/Saira.ttf) format("truetype");
 }
 
 
