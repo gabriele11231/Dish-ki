@@ -17,6 +17,7 @@
     --bs-body-font-family: "Saira";
 
     --bs-blue: #0A0B1A;
+    --bs-blue-rgb: 10, 11, 26;
     --bs-white: #FFFEE9;
     --bs-azure: #31DEE5;
     --bs-yellow: #FFFB40;
@@ -28,12 +29,22 @@
     --bs-body-color: var(--bs-white);
 }
 
+/*----CUSTOM-SPACING----*/
+.my-p-top-1 {
+    padding-top: 1rem !important;
+}
+
+.my-p-top-2 {
+    padding-top: 2rem !important;
+}
+
 
 /*----BODY-STYLES----*/
 body {
   background-color: var(--bs-blue);
 
 }
+
 
  /*----BACKGROUND-ANIMATION----*/
 .bg-noise {
@@ -74,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font: 3.4375rem var(--bs-title-font-family);
+  line-height: 4.0625rem;
 }
 
 h2 {
@@ -127,3 +139,18 @@ p {
     
     transition: text-shadow 0.5s ease-in-out;
 }
+
+
+/*----HERO-SECTION----*/
+.hero-section {
+    margin-top: -20px;
+    background-image: url('../img/nemo.gif');
+    background-color: rgba(var(--bs-blue-rgb), 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 0 0 20px 20px;
+}
+
