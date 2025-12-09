@@ -42,6 +42,24 @@
     padding-top: 2rem !important;
 }
 
+.section-spacing {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+
+.inside-spacing {
+  margin-top: 6rem;
+}
+
+.my-gap {
+    gap: 0.625rem !important;
+}
+
+.my-row-padding {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+}
+
 
 /*----BODY-STYLES----*/
 

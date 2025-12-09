@@ -67,7 +67,7 @@
     <!--END-NAVBAR-->
 
     <!--START-HERO-SECTION-->
-    <div class="container-fluid hero-section">
+    <div class="container-fluid g-0 hero-section">
 
         <div class ="row justify-content-center align-items-center h-100">
 
@@ -81,69 +81,64 @@
     </div>
     <!--END-HERO-SECTION-->
 
-    <!--START-3D-SECTION-->
 
+    <!--START-3D-SECTION-->
     <section class="section-spacing">
-        <div class="container text-center">
-            
-            <div class="row justify-content-center">
+
+
+        <div class="container-fluid g-0 justify-content-center text-center">
+            <div class="row my-row-padding g-0">
                 <div class="col-12">
-                    <h2 class="main-title">piatti che suonano forte</h2>
-                    <div class="gap-top subtitle">
-                        <p>Un menù che mixa nostalgia analogica e gusto futuristico.<br>
-                        Sapori che mandano in tilt i circuiti, dai vinili alle cassette.</p>
-                    </div>
+                    <h2 class="col-6 offset-3">piatti che suonano forte</h2>
+
+                    <p class="my-p-top-2 col-4 offset-4">Un menù che mixa nostalgia analogica e gusto futuristico. 
+                    Sapori che mandano in tilt i circuiti, dai vinili alle cassette.</p>
                 </div>
             </div>
+        </div>
 
 
-            <div class="row gap-large">
+        <div class="container-fluid g-0 justify-content-center text-center inside-spacing">
+
+            <div class="row g-0 my-row-padding my-gap">
                 
-                <div class="col-md-4 mb-5">
+                <div class="col">
 
-                    <div id="canvas-1">
-                    <model-viewer class="canvas-container glow-violet" src="img/3d_model.glb" alt="avatar" shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
-                    </model-viewer>
-                    </div>
-                
-                <p class="item-description">
-                        CD iridescenti sprigionano energia quantica, come dischi sacri che contengono sinfonie di codice e ricordi digitali.
-                    </p>
+                    <model-viewer class="canvas-container glow-violet" src="img/3d_model.glb" alt="avatar" shadow-intensity="1" 
+                    auto-rotate auto-rotate-delay="0" rotation-per-second="500%"></model-viewer>
+
+                    <p class="my-p-top-2"> CD iridescenti sprigionano energia quantica, come dischi sacri che contengono sinfonie di codice e ricordi digitali.</p>
+
                 </div>
 
-                <div class="col-md-4 mb-5">
+                <div class="col">
 
-                    <div id="canvas-2">
+
                     <model-viewer class="canvas-container glow-azure" src="img/3d_model.glb" alt="avatar" shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
                     </model-viewer>
-                    </div>
 
-                    <p class="item-description">
+                    <p class="my-p-top-2">
                         Un nastro di sapori che si illumina come una playlist retrò-futuristica: trasparente, vibrante e pronto a riavvolgere emozioni al primo assaggio.
                     </p>
                 </div>
 
-                <div class="col-md-4 mb-5">
+                <div class="col">
 
-                    <div id="canvas-3">
                     <model-viewer class="canvas-container glow-yellow" src="img/3d_model.glb" alt="avatar" shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
                     </model-viewer>
-                    </div>
 
-                    <p class="item-description">
+                    <p class="my-p-top-2">
                         Un vinile che ti accompagna tra onde magnetiche di sapore: ogni solco è un'esaltazione di gusto e vibrazioni.
                     </p>
                 </div>
-
             </div>
+
         </div>
     </section>
 
-    <!-- Import the component -->
+    <!-- Import the 3D component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-
     <!--END-3D-SECTION-->
 
 </body>
-
 </html>
