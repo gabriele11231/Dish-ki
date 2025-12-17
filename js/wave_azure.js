@@ -47,7 +47,11 @@ const noise = (function() {
 
 // --- SETUP CANVAS ---
 const canvas = document.getElementById('canvas1');
+const container = document.querySelector('.canvas-wrapper');
 const ctx = canvas.getContext('2d');
+
+canvas.width = container.clientWidth;
+canvas.height = container.clientHeight;
 
 let particlesArray = [];
 let time = 0;
