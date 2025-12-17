@@ -311,6 +311,9 @@ canvas {
 
 .card {
   border-radius: 20px;
+  background-color: var(--bs-white);
+  border: none;
+  color: var(--bs-blue);
 }
 
 .card-body {
