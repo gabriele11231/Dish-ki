@@ -42,6 +42,14 @@
     padding-top: 2rem !important;
 }
 
+.my-m-top-1 {
+    margin-top: 1rem !important;
+}
+
+.my-m-top-2 {
+    margin-top: 2rem !important;
+}
+
 .section-spacing {
   margin-top: 12rem;
   margin-bottom: 12rem;
@@ -134,6 +142,27 @@ h4 {
 
 p {
   font: 1.375rem var(--bs-body-font-family);
+}
+
+
+/*----BUTTON-STYLES----*/
+.btn-custom {
+  background-color: var(--bs-azure);
+  color: var(--bs-blue);
+  font-weight: bold;
+  padding: 1rem 4rem;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0 0 10px rgba(var(--bs-azure-rgb), 1),
+              0 0 20px rgba(var(--bs-azure-rgb), 0.8),
+              0 0 30px rgba(var(--bs-azure-rgb), 0.6);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.btn-custom:hover {
+  box-shadow: 0 0 30px rgba(var(--bs-azure-rgb), 1),
+              0 0 40px rgba(var(--bs-azure-rgb), 0.8),
+              0 0 50px rgba(var(--bs-azure-rgb), 0.6);
 }
 
 
