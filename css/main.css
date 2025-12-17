@@ -306,3 +306,58 @@ canvas {
   background-color: transparent;
   border: 2px solid var(--bs-azure);
 }
+
+
+/*----FOOTER----*/
+.tech-footer {
+  background-color: var(--bs-white);
+  padding: 4rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; 
+}
+
+.footer-brand {
+    height: 2.5vw;
+}
+
+/* Copyright */
+.copyright-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--bs-blue);
+}
+
+/* Social icons */
+
+.bi .bi-twitter-i{
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+.social-icons a {
+  color: var(--bs-blue);
+  margin-left: 4rem;
+  transition: text-shadow 0.5s ease;
+}
+.social-icons a:hover {
+  text-shadow:0 0 20px rgba(var(--bs-azure-rgb), 1),
+              0 0 30px rgba(var(--bs-azure-rgb), 0.8),
+              0 0 40px rgba(var(--bs-azure-rgb), 0.6);
+}
+
+/* Legal Links (Privacy, etc.) */
+.footer-links a {
+  color: var(--bs-blue);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 4rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
