@@ -15,6 +15,9 @@
 
 <body>
 
+    <!-- Import Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
@@ -67,13 +70,34 @@
     </nav>
     <!--END-NAVBAR-->
 
-
     <!--START-HERO-SECTION-->
     <div class="container-fluid g-0 hero-section">
 
-        <div class="row justify-content-center align-items-center h-100">
+        <script src="js/hero_frequency_change.js"></script>
+        <div class="position-absolute end-0 my-row-padding my-m-top-4 d-flex flex-column align-items-center">
 
-            <div class="col-sm-8">
+            <div class="freq-label">
+                Cambia frequenza
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <button class="change-freq" onclick="changeFreq(-1)">
+                    <i class="bi bi-caret-left-fill"></i>
+                </button>
+
+                <span id="freqDisplay" class="freq-value text-center">---Hz</span>
+
+                <button class="change-freq" onclick="changeFreq(1)">
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="row row-cols-5 row-cols-md-12 justify-content-center align-items-center h-100">
+
+            <div class="col-5 col-sm-8 my-row-padding">
                 <h1 class="text-center">dish-ki</h1>
                 <h1 class="text-center my-p-top-2">ASSAGGIA IL FUTURO CON IL RITMO DEL PASSATO</h1>
             </div>
@@ -261,10 +285,6 @@
 
 
     <!--START-FOOTER-SECTION-->
-
-    <!-- Import Bootstrap Icons CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <footer class="tech-footer">
         <div class="container-fluid">
             <div class="row align-items-center">
