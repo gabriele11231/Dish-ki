@@ -95,9 +95,9 @@
             </div>
         </div>
 
-        <div class="row row-cols-5 row-cols-md-12 justify-content-center align-items-center h-100">
+        <div class="row justify-content-center align-items-center h-100">
 
-            <div class="col-5 col-sm-8 my-row-padding">
+            <div class="col-12 col-sm-8 my-row-padding">
                 <h1 class="text-center">dish-ki</h1>
                 <h1 class="text-center my-p-top-2">ASSAGGIA IL FUTURO CON IL RITMO DEL PASSATO</h1>
             </div>
@@ -108,13 +108,13 @@
     <!--END-HERO-SECTION-->
 
 
-    <!--START-3D-SECTION-->
-    <section class="section-spacing">
+    <!--START-3D-SECTION-DESKTOP-->
+    <section class="section-spacing desktop-only">
 
 
         <div class="container-fluid g-0 justify-content-center text-center">
             <div class="row my-row-padding g-0">
-                <div class="col-12">
+                <div class="col-12 text-center justify-content-center">
                     <h2 class="col-6 offset-3">piatti che suonano forte</h2>
 
                     <p class="my-p-top-2 col-4 offset-4">Un menù che mixa nostalgia analogica e gusto futuristico.
@@ -170,7 +170,98 @@
 
     <!-- Import the 3D component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-    <!--END-3D-SECTION-->
+    <!--END-3D-SECTION-DESKTOP-->
+
+
+    <!--START-3D-SECTION-MOBILE-->
+    <section class="section-spacing mobile-only">
+
+        <div class="container-fluid g-0 justify-content-center">
+            <div class="row my-row-padding g-0">
+                <div class="col-12 justify-content-center">
+                    <h2 class="col-12">piatti che suonano forte</h2>
+
+                    <p class="my-p-top-1 col-12 col-sm-4 offset-sm-4">Un menù che mixa nostalgia analogica e gusto
+                        futuristico.
+                        Sapori che mandano in tilt i circuiti, dai vinili alle cassette.</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/auto_height.js"></script>
+        <div id="carousel3D" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner my-row-padding my-m-top-3">
+
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+
+                        <model-viewer class="canvas-container glow-violet" src="img/3d_model.glb" alt="avatar"
+                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
+                        </model-viewer>
+
+                        <div class="auto-height-text">
+                        <p class="my-m-top-1">CD iridescenti sprigionano energia quantica, come dischi sacri che contengono sinfonie
+                            di codice e ricordi digitali.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+
+                        <model-viewer class="canvas-container glow-yellow" src="img/3d_model.glb" alt="avatar"
+                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
+                        </model-viewer>
+
+                        <div class="auto-height-text">
+                        <p class="my-m-top-1">
+                            I bassi risuonano attraverso il metallo liquido, creando forme che sfidano la gravità e
+                            la logica umana.
+                        </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+
+                            <model-viewer class="canvas-container glow-azure" src="img/3d_model.glb" alt="avatar"
+                                shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
+                            </model-viewer>
+
+                            <div class="auto-height-text">
+                            <p class="my-m-top-1">
+                                Sinfonie dorate che illuminano l'oscurità del cyberspazio con frequenze pure e
+                                inalterate.
+                            </p>
+                            </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-indicators position-relative my-m-top-1">
+
+                <button type="button" data-bs-target="#carousel3D" data-bs-slide-to="0"
+                    class="active dot-indicator dot-violet" aria-current="true" aria-label="Slide 1"></button>
+
+                <button type="button" data-bs-target="#carousel3D" data-bs-slide-to="1" class="dot-indicator dot-yellow"
+                    aria-label="Slide 2"></button>
+
+                <button type="button" data-bs-target="#carousel3D" data-bs-slide-to="2" class="dot-indicator dot-azure"
+                    aria-label="Slide 3"></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Import the 3D component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <!--END-3D-SECTION-MOBILE-->
 
 
     <!--DOTTED-LINE-->

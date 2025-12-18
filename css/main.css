@@ -47,12 +47,20 @@
   padding-top: 2rem !important;
 }
 
+.my-p-top-3 {
+  padding-top: 3rem !important;
+}
+
 .my-m-top-1 {
   margin-top: 1rem !important;
 }
 
 .my-m-top-2 {
   margin-top: 2rem !important;
+}
+
+.my-m-top-3 {
+  margin-top: 3rem !important;
 }
 
 .my-m-top-4 {
@@ -90,10 +98,12 @@ html {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--bs-blue);
+  overflow-x: hidden;
 }
 
 
@@ -444,25 +454,96 @@ canvas {
 /*----MOBILE-STYLE----*/
 @media (max-width: 768px) {
 
-/*----CHANGES-NAVBAR----*/
-.navbar-brand {
-  width:60vw;
-  padding-left: 0.5rem;
-}
+  /*----HIDING-DIFFERENT-ELEMENTS----*/
+  .desktop-only {
+    display: none;
+  }
 
-.navbar-toggler {
-  border: none; 
-  color: var(--bs-blue);
-}
+  /*----SPACE-ADJUSTMENTS----*/
+  .section-spacing {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
 
-.navbar-toggler-icon {
-  border: none; 
-  color: var(--bs-blue);
-}
+  .my-row-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-/*----HERO-SECTION----*/
-.hero-section {
-  aspect-ratio: 9/16;  
-}
 
+  /*----CHANGES-NAVBAR----*/
+  .navbar-brand {
+    width: 60vw;
+    padding-left: 0.5rem;
+  }
+
+  .navbar-toggler {
+    border: none;
+    color: var(--bs-blue);
+  }
+
+  .navbar-toggler-icon {
+    border: none;
+    color: var(--bs-blue);
+  }
+
+
+  /*----HERO-SECTION----*/
+  .hero-section {
+    aspect-ratio: 9/16;
+  }
+
+  /*----3D-SECTION----*/
+  .glow-violet {
+    filter: drop-shadow(0px 0px 25px rgba(var(--bs-violet-rgb), 1));
+  }
+
+  .glow-azure {
+    filter: drop-shadow(0px 0px 25px rgba(var(--bs-azure-rgb), 1));
+  }
+
+  .glow-yellow {
+    filter: drop-shadow(0px 0px 25px rgba(var(--bs-yellow-rgb), 1));
+  }
+
+  /*---CAROUSEL---*/
+  /* Reset of Bootstrap's base style */
+  .carousel-indicators [data-bs-target] {
+    width: 20px;
+    /* Size of the dot */
+    height: 20px;
+    border-radius: 50%;
+    /* Makes it round */
+    border: none;
+    margin: 0 10px;
+    /* Space between the dots */
+    opacity: 0.5;
+    /* Opacity when inactive */
+    transition: all 0.3s ease;
+  }
+
+  /* Specific colors for each dot */
+  .dot-violet {
+    background-color: var(--bs-violet) !important;
+    box-shadow: 0 0 10px var(--bs-violet);
+  }
+
+  .dot-yellow {
+    background-color: var(--bs-yellow) !important;
+    box-shadow: 0 0 10px var(--bs-yellow);
+  }
+
+  .dot-azure {
+    background-color: var(--bs-azure) !important;
+    box-shadow: 0 0 10px var(--bs-azure);
+  }
+
+  /* Active state (When you are on the corresponding slide) */
+  .carousel-indicators .active {
+    opacity: 1;
+    transform: scale(1.3);
+    /* Becomes slightly larger */
+    filter: brightness(1.5);
+    /* Becomes brighter */
+  }
 }
