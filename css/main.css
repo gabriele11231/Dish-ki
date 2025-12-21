@@ -103,6 +103,8 @@ html {
 body {
   background-color: var(--bs-blue);
   overflow-x: hidden;
+  /* To avoid content being hidden under the fixed navbar */
+  padding-top: 3.5rem;
 }
 
 .mobile-only {
@@ -475,8 +477,7 @@ canvas {
 
   /*----SPACE-ADJUSTMENTS----*/
   .section-spacing {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    padding-block: 6rem;
   }
 
   .my-row-padding {

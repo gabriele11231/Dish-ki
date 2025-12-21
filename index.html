@@ -11,6 +11,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 
 <body>
@@ -18,16 +19,12 @@
     <!-- Import Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
     <!--Div for background noise animation-->
     <div class="bg-noise"></div>
 
 
     <!--START-NAVBAR-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
 
             <img class="navbar-brand" src="img/logo.png">
@@ -73,7 +70,6 @@
     <!--START-HERO-SECTION-->
     <div class="container-fluid g-0 hero-section">
 
-        <script src="js/hero_frequency_change.js"></script>
         <div class="position-absolute end-0 my-row-padding my-m-top-4 d-flex flex-column align-items-center">
 
             <div class="freq-label">
@@ -167,9 +163,6 @@
 
         </div>
     </section>
-
-    <!-- Import the 3D component -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <!--END-3D-SECTION-DESKTOP-->
 
 
@@ -188,7 +181,6 @@
             </div>
         </div>
 
-        <script src="js/auto_height.js"></script>
         <div id="carousel3D" class="carousel slide" data-bs-ride="carousel">
 
             <div class="carousel-inner my-row-padding my-m-top-3">
@@ -258,9 +250,6 @@
 
         </div>
     </section>
-
-    <!-- Import the 3D component -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <!--END-3D-SECTION-MOBILE-->
 
 
@@ -272,7 +261,6 @@
     <section class="section-spacing canvas-wrapper">
 
         <canvas id="canvas1"></canvas>
-        <script src="js/wave_azure.js"></script>
 
         <div class="container-fluid g-0 text-center">
             <div class="row my-row-padding g-0 my-gap justify-content-between">
@@ -410,6 +398,26 @@
         </div>
     </footer>
     <!--END-FOOTER-SECTION-->
+
+
+    <!--IMPORT-JS-->
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Script to handle hero frequency change -->
+    <script src="js/hero_frequency_change.js"></script>
+
+    <!-- Script to handle auto height for mobile 3D section -->
+    <script src="js/auto_height.js"></script>
+
+    <!-- Import the 3D component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <!-- Script for wave animation -->
+    <script src="js/wave_azure.js"></script>
 
 </body>
 
