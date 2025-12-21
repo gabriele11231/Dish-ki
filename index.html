@@ -259,9 +259,9 @@
 
 
     <!--START-REVIEW-SECTION-DESKTOP-->
-    <section class="section-spacing canvas-wrapper desktop-only">
+    <section class="section-spacing canvas-wrapper-desktop desktop-only">
 
-        <canvas id="canvas1"></canvas>
+        <canvas id="canvas-desktop"></canvas>
 
         <div class="container-fluid g-0 text-center">
             <div class="row my-row-padding g-0 my-gap justify-content-between">
@@ -339,9 +339,9 @@
 
 
     <!--START-REVIEW-SECTION-MOBILE-->
-    <section class="section-spacing canvas-wrapper mobile-only">
+    <section class="section-spacing canvas-wrapper-mobile mobile-only">
 
-        <canvas id="canvas1"></canvas>
+        <canvas id="canvas-mobile"></canvas>
 
         <div class="container-fluid g-0 justify-content-center">
             <div class="row my-row-padding g-0">
@@ -513,11 +513,15 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
     <!-- Script for wave animation -->
-    <script src="js/wave_azure.js"></script>
+    <script src="js/dotted_wave.js"></script>
 
     <script>
         // Ensure the DOM is fully loaded before running the script
         document.addEventListener("DOMContentLoaded", function () {
+
+            // Initialize particle wave animations for both desktop and mobile canvases
+            window.addEventListener('load', () => initParticleWave('canvas-desktop', '.canvas-wrapper-desktop', '#31DEE5'));
+            window.addEventListener('load', () => initParticleWave('canvas-mobile', '.canvas-wrapper-mobile', '#31DEE5'));
 
             // Normalize heights for mobile 3D section on load and resize
             window.addEventListener('load', () => normalizeSlideHeights('#carousel3D', '.auto-height-text'));

@@ -357,7 +357,7 @@ canvas {
   inset: 0;
 }
 
-.canvas-wrapper {
+.canvas-wrapper-desktop {
   position: relative;
 }
 
@@ -571,6 +571,10 @@ canvas {
   }
 
   /*----REVIEW-CARDS----*/
+  .canvas-wrapper-mobile {
+    position: relative;
+  }
+
   .card-glow {
     box-shadow: 0 0 15px rgba(var(--bs-azure-rgb), 1),
       0 0 25px rgba(var(--bs-azure-rgb), 0.8);
