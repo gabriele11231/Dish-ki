@@ -47,6 +47,10 @@
   padding-top: 2rem !important;
 }
 
+.my-p-block-2 {
+  padding-block: 2rem !important;
+}
+
 .my-p-top-3 {
   padding-top: 3rem !important;
 }
@@ -537,6 +541,10 @@ canvas {
     transition: all 0.3s ease;
   }
 
+  .carousel-indicators {
+    margin: 0;
+  }
+
   /* Specific colors for each dot */
   .dot-violet {
     background-color: var(--bs-violet) !important;
@@ -560,5 +568,11 @@ canvas {
     /* Becomes slightly larger */
     filter: brightness(1.5);
     /* Becomes brighter */
+  }
+
+  /*----REVIEW-CARDS----*/
+  .card-glow {
+    box-shadow: 0 0 15px rgba(var(--bs-azure-rgb), 1),
+      0 0 25px rgba(var(--bs-azure-rgb), 0.8);
   }
 }

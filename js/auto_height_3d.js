@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Funzione che calcola e normalizza le altezze
     function normalizeSlideHeights() {
-        const items = document.querySelectorAll('.carousel-item');
+        const items = document.querySelectorAll('#carousel3D .carousel-item');
         const textContainers = document.querySelectorAll('.auto-height-text');
         let maxHeight = 0;
 

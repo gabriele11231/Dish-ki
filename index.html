@@ -193,8 +193,9 @@
                         </model-viewer>
 
                         <div class="auto-height-text">
-                        <p class="my-m-top-1">CD iridescenti sprigionano energia quantica, come dischi sacri che contengono sinfonie
-                            di codice e ricordi digitali.</p>
+                            <p class="my-m-top-1">CD iridescenti sprigionano energia quantica, come dischi sacri che
+                                contengono sinfonie
+                                di codice e ricordi digitali.</p>
                         </div>
 
                     </div>
@@ -208,10 +209,10 @@
                         </model-viewer>
 
                         <div class="auto-height-text">
-                        <p class="my-m-top-1">
-                            I bassi risuonano attraverso il metallo liquido, creando forme che sfidano la gravità e
-                            la logica umana.
-                        </p>
+                            <p class="my-m-top-1">
+                                I bassi risuonano attraverso il metallo liquido, creando forme che sfidano la gravità e
+                                la logica umana.
+                            </p>
                         </div>
 
                     </div>
@@ -220,23 +221,23 @@
                 <div class="carousel-item">
                     <div class="d-flex flex-column align-items-center justify-content-center">
 
-                            <model-viewer class="canvas-container glow-azure" src="img/3d_model.glb" alt="avatar"
-                                shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
-                            </model-viewer>
+                        <model-viewer class="canvas-container glow-azure" src="img/3d_model.glb" alt="avatar"
+                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
+                        </model-viewer>
 
-                            <div class="auto-height-text">
+                        <div class="auto-height-text">
                             <p class="my-m-top-1">
                                 Sinfonie dorate che illuminano l'oscurità del cyberspazio con frequenze pure e
                                 inalterate.
                             </p>
-                            </div>
+                        </div>
 
                     </div>
                 </div>
 
             </div>
 
-            <div class="carousel-indicators position-relative my-m-top-1">
+            <div class="carousel-indicators position-relative">
 
                 <button type="button" data-bs-target="#carousel3D" data-bs-slide-to="0"
                     class="active dot-indicator dot-violet" aria-current="true" aria-label="Slide 1"></button>
@@ -257,8 +258,8 @@
     <div class="azure-dots-line"></div>
 
 
-    <!--START-REVIEW-SECTION-->
-    <section class="section-spacing canvas-wrapper">
+    <!--START-REVIEW-SECTION-DESKTOP-->
+    <section class="section-spacing canvas-wrapper desktop-only">
 
         <canvas id="canvas1"></canvas>
 
@@ -334,7 +335,101 @@
 
         </div>
     </section>
-    <!--END-REVIEW-SECTION-->
+    <!--END-REVIEW-SECTION-DESKTOP-->
+
+
+    <!--START-REVIEW-SECTION-MOBILE-->
+    <section class="section-spacing canvas-wrapper mobile-only">
+
+        <canvas id="canvas1"></canvas>
+
+        <div class="container-fluid g-0 justify-content-center">
+            <div class="row my-row-padding g-0">
+                <div class="col-12 justify-content-center">
+                    <h2 class="col-12">RECENSIONI A TUTTO VOLUME</h2>
+
+                    <p class="my-p-top-1 col-12 col-sm-4 offset-sm-4">Dalle onde magnetiche alle emozioni sensoriali:
+                        lasciati trasportare anche tu dal gusto!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="carousel-review" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner my-row-padding my-p-block-2">
+
+                <div class="carousel-item active">
+                    <div class="card card-glow auto-height-text-rw">
+                        <img src="img/index/recensione_1.png" alt="Recensione Robot 1" class="card-img-custom">
+                        <div class="card-body">
+                            <h4 class="card-title">emozionante</h4>
+                            <div class="rating-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <p class="card-text">Il circuito dorato è energia pura: ogni filo intrecciato è stato un
+                                assaggio celestiale.
+                                Non vedo l'ora di tornarci, personale gentile e disponibile.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card card-glow auto-height-text-rw">
+                        <img src="img/index/recensione_2.png" alt="Recensione Robot 1" class="card-img-custom">
+                        <div class="card-body">
+                            <h4 class="card-title">da consigliare</h4>
+                            <div class="rating-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <p class="card-text">Lo consiglierò senza dubbi ai miei amici, non è semplicemente cibo... è
+                                un'esperienza di vita tra onde di gusto e ricordi di quando ero giovane.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card card-glow auto-height-text-rw">
+                        <img src="img/index/recensione_3.png" alt="Recensione Robot 1" class="card-img-custom">
+                        <div class="card-body">
+                            <h4 class="card-title">la miglior final track</h4>
+                            <div class="rating-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot empty"></span>
+                            </div>
+                            <p class="card-text">Il menù offre sempre tutti i miglior piatti all'ultimo grido, ottima
+                                qualità-prezzo. Il dessert è una certezza vibrante, una traccia sensoriale.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-indicators position-relative">
+
+                <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="0"
+                    class="active dot-indicator dot-azure" aria-current="true" aria-label="Slide 1"></button>
+
+                <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="1" class="dot-indicator dot-azure"
+                    aria-label="Slide 2"></button>
+
+                <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="2" class="dot-indicator dot-azure"
+                    aria-label="Slide 3"></button>
+            </div>
+
+        </div>
+    </section>
+    <!--END-REVIEW-SECTION-MOBILE-->
 
 
     <!--DOTTED-LINE-->
@@ -411,7 +506,8 @@
     <script src="js/hero_frequency_change.js"></script>
 
     <!-- Script to handle auto height for mobile 3D section -->
-    <script src="js/auto_height.js"></script>
+    <script src="js/auto_height_3d.js"></script>
+    <script src="js/auto_height_card.js"></script>
 
     <!-- Import the 3D component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
