@@ -420,11 +420,11 @@
                 <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="0"
                     class="active dot-indicator dot-azure" aria-current="true" aria-label="Slide 1"></button>
 
-                <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="1" class="dot-indicator dot-azure"
-                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="1"
+                    class="dot-indicator dot-azure" aria-label="Slide 2"></button>
 
-                <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="2" class="dot-indicator dot-azure"
-                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="2"
+                    class="dot-indicator dot-azure" aria-label="Slide 3"></button>
             </div>
 
         </div>
@@ -439,12 +439,13 @@
     <!--START-CTA-PRENOTA-SECTION-->
     <section class="section-spacing canvas-wrapper">
 
-        <div class="container-fluid g-0 text-center">
+        <div class="container-fluid g-0 text-sm-center">
             <div class="row my-row-padding g-0 my-gap justify-content-between">
                 <div class="col-12">
-                    <h2 class="col-6 offset-3">prenota la tua traccia di gusto</h2>
+                    <h2 class="col-12 col-sm-6 offset-sm-3">prenota la tua traccia di gusto</h2>
 
-                    <p class="my-p-top-2 col-4 offset-4">Accendi i sensori e non fartelo raccontare! <br> Trova la
+                    <p class="my-p-top-2 col-12 col-sm-4 offset-sm-4">Accendi i sensori e non fartelo raccontare! <br>
+                        Trova la
                         frequenza, lasciati trasportare dalle onde magnetiche del sapore: il prossimo assaggio è già
                         pronto, inciso come una traccia unica, e aspetta solo te. Basta un click per entrare nel ritmo
                         del gusto. Che aspetti?</p>
@@ -496,7 +497,6 @@
 
 
     <!--IMPORT-JS-->
-
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -506,14 +506,28 @@
     <script src="js/hero_frequency_change.js"></script>
 
     <!-- Script to handle auto height for mobile 3D section -->
-    <script src="js/auto_height_3d.js"></script>
-    <script src="js/auto_height_card.js"></script>
+    <script src="js/auto_height.js"></script>
+
 
     <!-- Import the 3D component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
     <!-- Script for wave animation -->
     <script src="js/wave_azure.js"></script>
+
+    <script>
+        // Ensure the DOM is fully loaded before running the script
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Normalize heights for mobile 3D section on load and resize
+            window.addEventListener('load', () => normalizeSlideHeights('#carousel3D', '.auto-height-text'));
+            window.addEventListener('resize', () => normalizeSlideHeights('#carousel3D', '.auto-height-text'));
+
+            // Normalize heights for mobile Review section on load and resize
+            window.addEventListener('load', () => normalizeSlideHeights('#carousel-review', '.auto-height-text-rw'));
+            window.addEventListener('resize', () => normalizeSlideHeights('#carousel-review', '.auto-height-text-rw'));
+        });
+    </script>
 
 </body>
 
