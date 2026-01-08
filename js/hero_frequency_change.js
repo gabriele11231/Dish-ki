@@ -1,58 +1,59 @@
-// Lista delle frequenze disponibili
+//ATTENTION: This file is AI generated, even though it was manually reviewed and corrected.
+// List of available frequencies
 const frequencies = ["120Hz", "144Hz", "240Hz"];
 
 const audioTracks = [
-    "audio/classic_song.mp3",  // File per 120Hz
-    "audio/pop_song.mp3",  // File per 144Hz
-    "audio/edm_song.mp3"  // File per 240Hz
+    "audio/classic_song.mp3",  // File for 120Hz
+    "audio/pop_song.mp3",  // File for 144Hz
+    "audio/edm_song.mp3"  // File for 240Hz
 ];
 
-// NUOVO: Assicurati di avere questi file video (.mp4 è consigliato)
+// NEW: Make sure you have these video files (.mp4 is recommended)
 const videoSources = [
     "videos/video_144Hz.mp4", "videos/video_240Hz.mp4", "videos/video_120Hz.mp4"
 ];
 
-// --- STATO INIZIALE ---
-let currentFreqIndex = 0; // Iniziamo dal primo (60Hz)
+// --- INITIAL STATE ---
+let currentFreqIndex = 0; // Let's start with the first one (60Hz)
 let currentAudio = new Audio();
-// Riferimento all'elemento video nell'HTML
+// Reference to the video element in HTML
 const heroVideoElement = document.getElementById('heroBgVideo');
 
-// --- FUNZIONE PRINCIPALE CHIAMATA DAI BOTTONI ---
+// --- MAIN FUNCTION CALLED BY THE BUTTONS ---
 function changeFreq(direction) {
     const display = document.getElementById('freqDisplay');
 
-    // 1. Aggiorna indice con loop
+    // 1. Update index with loop
     currentFreqIndex += direction;
     if (currentFreqIndex >= frequencies.length) currentFreqIndex = 0;
     else if (currentFreqIndex < 0) currentFreqIndex = frequencies.length - 1;
 
-    // 2. Aggiorna Testo a video
+    // 2. Update Text on screen
     display.style.opacity = 0;
     setTimeout(() => {
         display.innerText = frequencies[currentFreqIndex];
         display.style.opacity = 1;
     }, 100);
 
-    // 3. Chiama la funzione che cambia i media
+    // 3. Call the function that changes the media
     updateMediaByIndex(currentFreqIndex);
 }
 
-// --- FUNZIONE CHE GESTISCE IL CAMBIO MEDIA (AUDIO + VIDEO) ---
+// --- FUNCTION THAT MANAGES MEDIA CHANGE (AUDIO + VIDEO) ---
 function updateMediaByIndex(index) {
-    // --- GESTIONE AUDIO ---
+    // --- AUDIO MANAGEMENT ---
     currentAudio.pause();
     currentAudio.currentTime = 0;
     currentAudio.src = audioTracks[index];
-    currentAudio.volume = 0.6; // Volume audio
-    // Nota: Chrome richiede un click prima di far partire l'audio. 
-    // Al primo click sulle frecce, l'audio partirà.
+    currentAudio.volume = 0.6; // Audio volume
+    // Note: Chrome requires a click before playing audio. 
+    // At the first click on the arrows, the audio will start.
     currentAudio.play().catch(e => console.log("Audio play waiting for interaction"));
 
-    // --- GESTIONE VIDEO (NUOVO) ---
-    // Cambia la sorgente del video
+    // --- AUDIO MANAGEMENT (NEW) ---
+    // Change the video source
     heroVideoElement.src = videoSources[index];
-    // È importante richiamare .play() dopo aver cambiato la sorgente dinamicamente
+    // It is important to call .play() after changing the source dynamically
     heroVideoElement.play().catch(e => console.log("Video autoplay blocked"));
 }
 

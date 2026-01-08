@@ -6,7 +6,7 @@
  * @param {color} color - The color of the particles in hexadecimal format (e.g., '#31DEE5')
  */
 function initParticleWave(canvasId, wrapperSelector, color) {
-    // 1. CONFIGURAZIONE
+    // 1. CONFIGURATION
     const config = {
         particleSize: 1.3,      // Size of the particles
         spacingX: 20,           // Horizontal spacing

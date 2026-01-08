@@ -1,3 +1,4 @@
+<!--SHIFT+ALT+F-AUTO-INDENT-->
 <!doctype html>
 <html lang="en">
 
@@ -24,7 +25,7 @@
 
 
     <!--START-NAVBAR-->
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary">
         <div class="container-fluid">
 
             <img class="navbar-brand" src="img/logo.png">
@@ -67,6 +68,7 @@
     </nav>
     <!--END-NAVBAR-->
 
+
     <!--START-HERO-SECTION-->
     <div class="container-fluid g-0 hero-section">
 
@@ -93,7 +95,7 @@
 
         <div class="row justify-content-center align-items-center h-100">
 
-            <div class="col-12 col-sm-8 my-row-padding">
+            <div class="col-12 col-xl-8 my-row-padding">
                 <h1 class="text-center">dish-ki</h1>
                 <h1 class="text-center my-p-top-2">ASSAGGIA IL FUTURO CON IL RITMO DEL PASSATO</h1>
             </div>
@@ -106,7 +108,6 @@
 
     <!--START-3D-SECTION-DESKTOP-->
     <section class="section-spacing desktop-only">
-
 
         <div class="container-fluid g-0 justify-content-center text-center">
             <div class="row my-row-padding g-0">
@@ -166,15 +167,15 @@
     <!--END-3D-SECTION-DESKTOP-->
 
 
-    <!--START-3D-SECTION-MOBILE-->
-    <section class="section-spacing mobile-only">
+    <!--START-3D-SECTION-MOBILE-TABLET-->
+    <section class="section-spacing mobile-only tablet-only">
 
         <div class="container-fluid g-0 justify-content-center">
             <div class="row my-row-padding g-0">
                 <div class="col-12 justify-content-center">
                     <h2 class="col-12">piatti che suonano forte</h2>
 
-                    <p class="my-p-top-1 col-12 col-sm-4 offset-sm-4">Un menù che mixa nostalgia analogica e gusto
+                    <p class="col-12 my-p-top-1 ">Un menù che mixa nostalgia analogica e gusto
                         futuristico.
                         Sapori che mandano in tilt i circuiti, dai vinili alle cassette.</p>
                 </div>
@@ -192,7 +193,7 @@
                             shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
                         </model-viewer>
 
-                        <div class="auto-height-text">
+                        <div class="auto-height-text container-fluid">
                             <p class="my-m-top-1">CD iridescenti sprigionano energia quantica, come dischi sacri che
                                 contengono sinfonie
                                 di codice e ricordi digitali.</p>
@@ -208,7 +209,7 @@
                             shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
                         </model-viewer>
 
-                        <div class="auto-height-text">
+                        <div class="auto-height-text container-fluid">
                             <p class="my-m-top-1">
                                 I bassi risuonano attraverso il metallo liquido, creando forme che sfidano la gravità e
                                 la logica umana.
@@ -225,7 +226,7 @@
                             shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%">
                         </model-viewer>
 
-                        <div class="auto-height-text">
+                        <div class="auto-height-text container-fluid">
                             <p class="my-m-top-1">
                                 Sinfonie dorate che illuminano l'oscurità del cyberspazio con frequenze pure e
                                 inalterate.
@@ -251,7 +252,7 @@
 
         </div>
     </section>
-    <!--END-3D-SECTION-MOBILE-->
+    <!--END-3D-SECTION-MOBILE-TABLET-->
 
 
     <!--DOTTED-LINE-->
@@ -348,13 +349,13 @@
                 <div class="col-12 justify-content-center">
                     <h2 class="col-12">RECENSIONI A TUTTO VOLUME</h2>
 
-                    <p class="my-p-top-1 col-12 col-sm-4 offset-sm-4">Dalle onde magnetiche alle emozioni sensoriali:
+                    <p class="my-p-top-1 col-12">Dalle onde magnetiche alle emozioni sensoriali:
                         lasciati trasportare anche tu dal gusto!</p>
                 </div>
             </div>
         </div>
 
-        <div id="carousel-review" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel-review" class="carousel slide col-sm-6 offset-sm-3" data-bs-ride="carousel">
 
             <div class="carousel-inner my-row-padding my-p-block-2">
 
@@ -432,6 +433,85 @@
     <!--END-REVIEW-SECTION-MOBILE-->
 
 
+    <!--START-REVIEW-SECTION-TABLET-->
+    <section class="section-spacing overflow-hidden canvas-wrapper-tablet tablet-only">
+        <div class="container-fluid g-0">
+
+            <canvas id="canvas-tablet"></canvas>
+
+            <div class="container-fluid g-0 justify-content-center">
+                <div class="row my-row-padding g-0">
+                    <div class="col-12 justify-content-center">
+                        <h2 class="col-12">RECENSIONI A TUTTO VOLUME</h2>
+
+                        <p class="my-p-top-1 col-12">Dalle onde magnetiche alle emozioni sensoriali:
+                            lasciati trasportare anche tu dal gusto!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-container d-flex flex-nowrap my-p-block-2">
+
+                <div class="card-item my-row-padding-left">
+                    <div class="card card-glow h-100">
+                        <img src="img/index/recensione_1.png" alt="Recensione Robot 1" class="card-img-custom">
+                        <div class="card-body">
+                            <h4 class="card-title">emozionante</h4>
+                            <div class="rating-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <p class="card-text">Il circuito dorato è energia pura: ogni filo intrecciato è stato un
+                                assaggio celestiale.
+                                Non vedo l'ora di tornarci, personale gentile e disponibile.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-item my-gap-card">
+                    <div class="card card-glow h-100">
+                        <img src="img/index/recensione_2.png" alt="Recensione Robot 1" class="card-img-custom">
+                        <div class="card-body">
+                            <h4 class="card-title">da consigliare</h4>
+                            <div class="rating-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <p class="card-text">Lo consiglierò senza dubbi ai miei amici, non è semplicemente cibo... è
+                                un'esperienza di vita tra onde di gusto e ricordi di quando ero giovane.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-item my-row-padding-right">
+                    <div class="card card-glow h-100">
+                        <img src="img/index/recensione_3.png" alt="Recensione Robot 1" class="card-img-custom">
+                        <div class="card-body">
+                            <h4 class="card-title">la miglior final track</h4>
+                            <div class="rating-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot empty"></span>
+                            </div>
+                            <p class="card-text">Il menù offre sempre tutti i miglior piatti all'ultimo grido, ottima
+                                qualità-prezzo. Il dessert è una certezza vibrante, una traccia sensoriale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END-REVIEW-SECTION-TABLET-->
+
+
     <!--DOTTED-LINE-->
     <div class="azure-dots-line"></div>
 
@@ -439,12 +519,12 @@
     <!--START-CTA-PRENOTA-SECTION-->
     <section class="section-spacing canvas-wrapper">
 
-        <div class="container-fluid g-0 text-sm-center">
+        <div class="container-fluid g-0 text-xl-center">
             <div class="row my-row-padding g-0 my-gap justify-content-between">
                 <div class="col-12">
-                    <h2 class="col-12 col-sm-6 offset-sm-3">prenota la tua traccia di gusto</h2>
+                    <h2 class="col-12">prenota la tua traccia di gusto</h2>
 
-                    <p class="my-p-top-2 col-12 col-sm-4 offset-sm-4">Accendi i sensori e non fartelo raccontare! <br>
+                    <p class="col-12 col-xl-4 offset-xl-4 my-p-top-2">Accendi i sensori e non fartelo raccontare! <br>
                         Trova la
                         frequenza, lasciati trasportare dalle onde magnetiche del sapore: il prossimo assaggio è già
                         pronto, inciso come una traccia unica, e aspetta solo te. Basta un click per entrare nel ritmo
@@ -464,29 +544,44 @@
         <div class="container-fluid">
             <div class="row align-items-center">
 
-                <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
-                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
-                        <span class="footer-logo"><img class="footer-brand" src="img/logo.png"></span>
+                <div class="col-12 col-md-6 order-2 order-md-1 text-start mt-4 mt-md-0">
+                    <div class="logo-wrapper d-flex align-items-center mb-2">
+
+                        <a href="#" class="me-3">
+                            <img src="img/logo.png" alt="DISH-KI" class="footer-logo-img">
+                        </a>
                     </div>
-                    <div class="copyright-text my-m-top-2">
+
+                    <div class="copyright-text">
                         Copyright 2026 Dish-ki S.p.A.
                     </div>
                 </div>
 
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="social-icons">
-                        <a href="http://tiktok.com/"><i class="bi bi-tiktok"></i></a>
-                        <a href="http://instagram.com"><i class="bi bi-instagram"></i></a>
-                        <a href="http://twitter.com"><i class="bi bi-twitter-x"></i></a>
-                        <a href="http://facebook.com/"><i class="bi bi-facebook"></i></a>
-                        <a href="http://youtube.com "><i class="bi bi-youtube"></i></a>
-                    </div>
 
-                    <div class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end my-m-top-2">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Cookie Policy</a>
-                        <a href="#">Contatti</a>
+                <div class="col-12 col-md-6 order-1 order-md-2">
+                    <div class="row">
+
+                        <div class="col-6 col-md-12 order-2 order-md-1 text-end mb-xl-3">
+                            <div
+                                class="social-icons d-flex flex-column flex-md-row justify-content-end align-items-end align-items-md-center gap-2 gap-md-4">
+                                <a href="http://facebook.com/"><i class="bi bi-facebook"></i></a>
+                                <a href="http://youtube.com"><i class="bi bi-youtube"></i></a>
+                                <a href="http://instagram.com"><i class="bi bi-instagram"></i></a>
+                                <a href="http://twitter.com"><i class="bi bi-twitter-x"></i></a>
+                                <a href="http://tiktok.com/"><i class="bi bi-tiktok"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-12 order-1 order-md-2 text-start text-md-end">
+                            <div
+                                class="footer-links d-flex flex-column flex-md-row justify-content-md-end gap-1 gap-md-4 h-100 justify-content-between">
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Terms</a>
+                                <a href="#">Cookie Policy</a>
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -494,7 +589,6 @@
         </div>
     </footer>
     <!--END-FOOTER-SECTION-->
-
 
     <!--IMPORT-JS-->
     <!--Bootstrap-->
@@ -508,12 +602,14 @@
     <!-- Script to handle auto height for mobile 3D section -->
     <script src="js/auto_height.js"></script>
 
-
     <!-- Import the 3D component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
     <!-- Script for wave animation -->
     <script src="js/dotted_wave.js"></script>
+
+    <!-- Script for horizontal scroll -->
+    <script src="js/horizontal_scroll.js"></script>
 
     <script>
         // Ensure the DOM is fully loaded before running the script
@@ -522,6 +618,7 @@
             // Initialize particle wave animations for both desktop and mobile canvases
             window.addEventListener('load', () => initParticleWave('canvas-desktop', '.canvas-wrapper-desktop', '#31DEE5'));
             window.addEventListener('load', () => initParticleWave('canvas-mobile', '.canvas-wrapper-mobile', '#31DEE5'));
+            window.addEventListener('load', () => initParticleWave('canvas-tablet', '.canvas-wrapper-tablet', '#31DEE5'));
 
             // Normalize heights for mobile 3D section on load and resize
             window.addEventListener('load', () => normalizeSlideHeights('#carousel3D', '.auto-height-text'));

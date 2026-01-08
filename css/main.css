@@ -88,6 +88,14 @@
   padding-right: 1.875rem;
 }
 
+.my-row-padding-left {
+  padding-left: 1.875rem;
+}
+
+.my-row-padding-right {
+  padding-right: 1.875rem;
+}
+
 
 /*----BODY-STYLES----*/
 
@@ -112,6 +120,10 @@ body {
 }
 
 .mobile-only {
+  display: none;
+}
+
+.tablet-only {
   display: none;
 }
 
@@ -409,40 +421,36 @@ canvas {
 
 
 /*----FOOTER----*/
+/* --- BASE (General Style) --- */
 .tech-footer {
   background-color: var(--bs-white);
-  padding: 4rem;
+  color: var(--bs-blue);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+
+  /* DESKTOP DEFAULT: Wide spacing */
+  padding: 3rem;
 }
 
-.footer-brand {
-  height: 2.5vw;
+/* --- LOGO --- */
+.footer-logo-img {
+  /* DESKTOP DEFAULT: Big Logo */
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
-/* Copyright */
-.copyright-text {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--bs-blue);
-}
-
-/* Social icons */
-
-.bi .bi-twitter-i {
-  padding: 0;
-  margin: 0;
-}
-
-.social-icons {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-}
-
+/* --- SOCIAL --- */
 .social-icons a {
   color: var(--bs-blue);
-  margin-left: 4rem;
-  transition: text-shadow 0.5s ease;
+  text-decoration: none;
+  line-height: 1;
+  padding-left: 2rem;
+
+  /* DESKTOP DEFAULT: Big Icons */
+  font-size: 2rem;
+  transition: text-shadow 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
@@ -451,24 +459,34 @@ canvas {
     0 0 40px rgba(var(--bs-azure-rgb), 0.6);
 }
 
-/* Legal Links (Privacy, etc.) */
+/* --- LINK --- */
 .footer-links a {
   color: var(--bs-blue);
   text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 500;
-  margin-left: 4rem;
+  font-weight: 400;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+
+  /* DESKTOP DEFAULT */
+  font-size: 0.9rem;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
 }
 
+.copyright-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
 
 /*----RESPONSIVE-STYLE----*/
 
-/*----MOBILE-STYLE----*/
-@media (max-width: 768px) {
+/*----MOBILE-TABLET-STYLE----*/
+@media (max-width: 1200px) {
 
   /*----HIDING-DIFFERENT-ELEMENTS----*/
   .desktop-only {
@@ -492,7 +510,7 @@ canvas {
 
   /*----CHANGES-NAVBAR----*/
   .navbar-brand {
-    width: 60vw;
+    width: calc(60vw - 45px);
     padding-left: 0.5rem;
   }
 
@@ -578,5 +596,106 @@ canvas {
   .card-glow {
     box-shadow: 0 0 15px rgba(var(--bs-azure-rgb), 1),
       0 0 25px rgba(var(--bs-azure-rgb), 0.8);
+  }
+
+  /*----FOOTER----*/
+  .tech-footer {
+    padding: 2rem 1.5rem;
+    /* Reducing padding */
+  }
+
+  /* Reducing the logo */
+  .footer-logo-img {
+    height: 1.5rem;
+  }
+
+  /* Adapting social icons */
+  .social-icons a {
+    font-size: 1.4rem;
+    /* On mobile they are in a column, giving vertical space */
+    margin-bottom: 1rem;
+  }
+
+  /* Adapting links */
+  .footer-links a {
+    font-size: 0.8rem;
+    /* More vertical space for touch */
+    line-height: 2;
+    white-space: nowrap;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+
+/*---TABLET-STYLE---*/
+@media (min-width: 576px) and (max-width: 1200px) {
+
+  .canvas-wrapper-tablet {
+    position: relative;
+  }
+
+  .my-row-padding {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .my-gap-card{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .tablet-only {
+    display: block;
+  }
+
+  /*---HORIZONTAL-SCROLL---*/
+  .scroll-container {
+    overflow-x: auto;
+    /* Enables horizontal scroll */
+    overflow-y: hidden;
+    /* Blocks vertical scroll */
+    scroll-snap-type: x mandatory;
+    /* "Magnet" effect when scrolling */
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+
+    /* Hides the scrollbar aesthetically but keeps the function */
+    scrollbar-width: none;
+    /* Firefox */
+    gap: 1.5rem
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+  }
+
+  /*---CARD-REVIEW---*/
+  .card-item {
+    /* Fixed size for cards so they don't shrink */
+    flex: 0 0 auto;
+    width: 50vw;
+    scroll-snap-align: start;
+  }
+
+  /* --- CURSOR AND UX FOR DRAGGING --- */
+  .scroll-container {
+    /* Prevents text selection or image highlighting while dragging */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* IMPORTANT: Prevents the browser from trying to drag the image out when dragging the mouse */
+  .scroll-container img {
+    pointer-events: none;
   }
 }
