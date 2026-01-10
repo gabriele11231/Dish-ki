@@ -634,6 +634,26 @@ canvas {
   filter: brightness(0.6) grayscale(30%);
 }
 
+/*---CARD-SQUARE---*/
+.card-img-custom-square {
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card-ghost {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--bs-blue);
+  width: 50vw;
+}
+
+.card-ghost-text {
+  font-weight: 600;
+  color: var(--bs-white);
+}
+
 /*---EVENT-FORM---*/
 .neon-input {
   background-color: var(--bs-white);
@@ -842,6 +862,15 @@ canvas {
     padding-right: 15px;
   }
 
+  .my-gap-card-left {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+  .my-gap-card-right {
+    padding-right: 30px;
+    padding-left: 15px;
+  }
+
   .mobile-only {
     display: none;
   }
@@ -866,7 +895,15 @@ canvas {
     /* Hides the scrollbar aesthetically but keeps the function */
     scrollbar-width: none;
     /* Firefox */
-    gap: 1.5rem
+    gap: 1.5rem;
+  }
+
+  .scroll-container::after {
+    /* Space at the end of the scroll */
+    content: "";
+    display: block;
+    padding-right: 1.5rem;
+    flex: 0 0 1.5rem;
   }
 
   .scroll-container::-webkit-scrollbar {
