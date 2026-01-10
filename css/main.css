@@ -241,6 +241,30 @@ p {
 }
 
 
+/*----SEPARATION-LINES----*/
+.azure-dots-line {
+  width: 100%;
+  height: 1rem;
+
+  background-image: radial-gradient(circle, var(--bs-azure) 5px, transparent 5px);
+  background-size: 2.5rem 1rem;
+
+  background-repeat: repeat-x;
+  background-position: center;
+
+  filter: drop-shadow(0 0 10px rgba(var(--bs-azure-rgb), 1)) drop-shadow(0 0 5px rgba(var(--bs-azure-rgb), 0.8));
+}
+
+.violet-continuous-line {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--bs-violet);
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px rgba(var(--bs-violet-rgb), 1)) drop-shadow(0 0 5px rgba(var(--bs-violet-rgb), 0.8));
+  border: none;
+}
+
+
 /*----BUTTON-STYLES----*/
 .btn-custom {
   background-color: var(--bs-azure);
@@ -259,6 +283,25 @@ p {
   box-shadow: 0 0 30px rgba(var(--bs-azure-rgb), 1),
     0 0 40px rgba(var(--bs-azure-rgb), 0.8),
     0 0 50px rgba(var(--bs-azure-rgb), 0.6);
+}
+
+.btn-custom-violet {
+  background-color: var(--bs-violet);
+  color: var(--bs-blue);
+  font-weight: bold;
+  padding: 1rem 4rem;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0 0 10px rgba(var(--bs-violet-rgb), 1),
+    0 0 20px rgba(var(--bs-violet-rgb), 0.8),
+    0 0 30px rgba(var(--bs-violet-rgb), 0.6);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.btn-custom-violet:hover {
+  box-shadow: 0 0 30px rgba(var(--bs-violet-rgb), 1),
+    0 0 40px rgba(var(--bs-violet-rgb), 0.8),
+    0 0 50px rgba(var(--bs-violet-rgb), 0.6);
 }
 
 
@@ -350,21 +393,6 @@ p {
 }
 
 
-/*----DOTTED-LINE----*/
-.azure-dots-line {
-  width: 100%;
-  height: 1rem;
-
-  background-image: radial-gradient(circle, var(--bs-azure) 5px, transparent 5px);
-  background-size: 2.5rem 1rem;
-
-  background-repeat: repeat-x;
-  background-position: center;
-
-  filter: drop-shadow(0 0 10px rgba(var(--bs-azure-rgb), 1)) drop-shadow(0 0 5px rgba(var(--bs-azure-rgb), 0.8));
-}
-
-
 /*----REVIEW-SECTION----*/
 /*----DOT-WAVE----*/
 canvas {
@@ -429,7 +457,7 @@ canvas {
 
 
 /*----FOOTER----*/
-/* --- BASE (General Style) --- */
+/*---BASE (General Style)---*/
 .tech-footer {
   background-color: var(--bs-white);
   color: var(--bs-blue);
@@ -440,7 +468,7 @@ canvas {
   padding: 3rem;
 }
 
-/* --- LOGO --- */
+/*---LOGO---*/
 .footer-logo-img {
   /* DESKTOP DEFAULT: Big Logo */
   height: 2rem;
@@ -449,7 +477,7 @@ canvas {
   display: block;
 }
 
-/* --- SOCIAL --- */
+/*---SOCIAL---*/
 .social-icons a {
   color: var(--bs-blue);
   text-decoration: none;
@@ -467,7 +495,7 @@ canvas {
     0 0 40px rgba(var(--bs-azure-rgb), 0.6);
 }
 
-/* --- LINK --- */
+/*---LINK---*/
 .footer-links a {
   color: var(--bs-blue);
   text-decoration: none;
@@ -493,112 +521,149 @@ canvas {
 
 /*---VINYL-SECTION---*/
 .vinyl-section {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    /* Centratura Flexbox diretta */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  /* Center flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .vinile-bg {
-    position: absolute;
-    width: 90vw;
-    height: 45vh;
-    z-index: 0;
-    pointer-events: none; /* Click passante */
+  position: absolute;
+  width: 90vw;
+  height: 45vh;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* --- SCENA 3D --- */
+/* 3D-Scene */
 .scene {
-    position: relative;
-    width: 15vw;  /* Larghezza base scena */
-    height: 15vw; /* Altezza base scena */
+  position: relative;
+  width: 15vw;
+  height: 15vw;
 }
 
 .turntable {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* --- STRUTTURA CARD --- */
+/* Card-Structure */
 .card-3d {
-    position: absolute;
-    width: 15vw;
-    height: 15vw;
-    top: -10vw;
-    left: 0;
-    transform-style: preserve-3d;
-    cursor: pointer;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  top: -10vw;
+  left: 0;
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
 
-/* Posizionamento fisso (Raggio 35vw) */
-.card-3d:nth-child(1) { transform: rotateY(0deg)   translateZ(35vw); }
-.card-3d:nth-child(2) { transform: rotateY(90deg)  translateZ(35vw); }
-.card-3d:nth-child(3) { transform: rotateY(180deg) translateZ(35vw); }
-.card-3d:nth-child(4) { transform: rotateY(270deg) translateZ(35vw); }
+/* Fixed */
+.card-3d:nth-child(1) {
+  transform: rotateY(0deg) translateZ(35vw);
+}
 
-/* --- CONTENUTO CARD --- */
+.card-3d:nth-child(2) {
+  transform: rotateY(90deg) translateZ(35vw);
+}
+
+.card-3d:nth-child(3) {
+  transform: rotateY(180deg) translateZ(35vw);
+}
+
+.card-3d:nth-child(4) {
+  transform: rotateY(270deg) translateZ(35vw);
+}
+
+/* Card-Content */
 .card-inner {
-    width: 100%;
-    text-align: center;
-    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 100%;
+  text-align: center;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .img-frame {
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 20px;
-    overflow: hidden;
-    background: var(--bs-blue, #0A0B1A);
-    transition: transform 0.5s ease, border-color 0.5s, box-shadow 0.5s, filter 0.5s;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bs-blue, #0A0B1A);
+  transition: transform 0.5s ease, border-color 0.5s, box-shadow 0.5s, filter 0.5s;
 }
 
 .img-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .caption {
-    padding-top: 7vw;
-    color: var(--bs-blue, #0A0B1A);
-    opacity: 0;
-    width: 28vw;
-    /* Centratura Assoluta Orizzontale + Offset Verticale */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    transition: all 0.5s ease;
+  padding-top: 7vw;
+  color: var(--bs-blue, #0A0B1A);
+  opacity: 0;
+  width: 28vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  transition: all 0.5s ease;
 }
 
-/* --- STATI (ACTIVE vs IDLE) --- */
-
-/* Active (Centrale): Grande (1.8x), Magenta, Testo Visibile */
+/* States (Active vs Idle) */
 .card-3d.active .img-frame {
-    transform: scale(1.8);
-    box-shadow: 0 0 30px #D62EE6;
-    z-index: 10;
+  transform: scale(1.8);
+  box-shadow: 0 0 15px rgba(var(--bs-violet-rgb), 1),
+    0 0 25px rgba(var(--bs-violet-rgb), 0.8),
+    0 0 30px rgba(var(--bs-violet-rgb), 0.6);
+  z-index: 10;
 }
 
 .card-3d.active .caption {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
-/* Inactive (Laterali): Piccole (0.7x), Scure, Testo Invisibile */
+/* Inactive */
 .card-3d:not(.active) .img-frame {
-    transform: scale(0.8);
-    filter: brightness(0.6) grayscale(30%);
+  transform: scale(0.8);
+  filter: brightness(0.6) grayscale(30%);
+}
+
+/*---EVENT-FORM---*/
+.neon-input {
+  background-color: var(--bs-white);
+  border-radius: 10px;
+  color: #0A0B1A;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(var(--bs-violet-rgb), 1),
+    0 0 20px rgba(var(--bs-violet-rgb), 0.8),
+    0 0 30px rgba(var(--bs-violet-rgb), 0.6);
+  transition: box-shadow 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder color */
+.neon-input::placeholder {
+  color: #0A0B1A;
+  opacity: 0.7;
+}
+
+.neon-input:focus {
+  background-color: #FFFEE9;
+  color: #0A0B1A;
+  box-shadow: 0 0 15px rgba(var(--bs-violet-rgb), 1),
+    0 0 25px rgba(var(--bs-violet-rgb), 0.8),
+    0 0 30px rgba(var(--bs-violet-rgb), 0.6);
 }
 
 
 /*----RESPONSIVE-STYLE----*/
-
 /*----MOBILE-TABLET-STYLE----*/
 @media (max-width: 1200px) {
 
@@ -616,6 +681,10 @@ canvas {
     padding-block: 6rem;
   }
 
+  .section-spacing-top {
+    padding-top: 6rem;
+  }
+
   .my-row-padding {
     padding-left: 20px;
     padding-right: 20px;
@@ -623,6 +692,14 @@ canvas {
 
   .my-p-top-2 {
     padding-top: 1rem !important;
+  }
+
+  .my-m-top-4 {
+    margin-top: 2rem !important;
+  }
+
+  .my-m-top-2 {
+    margin-top: 1rem !important;
   }
 
 
@@ -760,7 +837,7 @@ canvas {
     padding-right: 30px;
   }
 
-  .my-gap-card{
+  .my-gap-card {
     padding-left: 15px;
     padding-right: 15px;
   }

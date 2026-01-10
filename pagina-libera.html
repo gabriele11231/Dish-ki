@@ -125,7 +125,7 @@
 
 
     <!--START-VINYL-SECTION-->
-    <section class="vinyl-section section-spacing-top">
+    <section class="vinyl-section section-spacing-top desktop-only">
 
         <img src="img/pagina-libera/vinile.png" alt="Vinyl Background" class="vinile-bg">
 
@@ -171,7 +171,8 @@
                             <img src="img/pagina-libera/drink.png" alt="Drink">
                         </div>
                         <div class="caption">
-                            <p>Connessione stabilita, la risonanza unica ha fatto vibrare i loro circuiti interni all'unisono.</p>
+                            <p>Connessione stabilita, la risonanza unica ha fatto vibrare i loro circuiti interni
+                                all'unisono.</p>
                         </div>
                     </div>
                 </div>
@@ -181,57 +182,42 @@
     </section>
     <!--END-VINYL-SECTION-->
 
-    <script>
-        let currDeg = 0;
-        let activeIndex = 0;
-        const items = document.querySelectorAll('.card-3d');
-        const turntable = document.querySelector('.turntable');
-        const totalItems = items.length; // 4
 
-        function rotateTo(index) {
-            // Calcola la distanza più breve per ruotare
-            let diff = index - activeIndex;
-            if (diff === 3) diff = -1;
-            if (diff === -3) diff = 1;
+    <!--CONTINUOUS-LINE-->
+    <div class="container-fluid">
+        <div class="violet-continuous-line"></div>
+    </div>
 
-            // Aggiorna i gradi totali del tavolo
-            currDeg -= diff * 90;
-            activeIndex = index;
 
-            // 1. Ruota il tavolo intero
-            turntable.style.transform = `rotateY(${currDeg}deg)`;
+    <!--START-EVENT-FORM-->
+    <section class="d-flex align-items-center section-spacing">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 text-lg-center">
 
-            // 2. Aggiorna le singole card
-            items.forEach((item, i) => {
-                // Rimuovi active da tutti
-                item.classList.remove('active');
+                    <h2 class="neon-title">
+                        trova la tua<br>scheda gemella
+                    </h2>
 
-                // Calcola la contro-rotazione per l'immagine
-                // L'angolo base della card (0, 90, 180...) + l'angolo attuale del tavolo
-                const baseAngle = i * 90;
-                const counterRotate = -(baseAngle + currDeg);
+                    <form>
+                        <div class="my-m-top-4">
+                            <input type="text" class="form-control neon-input" placeholder="Nome">
+                        </div>
 
-                // Applica la contro-rotazione al div interno (.card-inner)
-                const inner = item.querySelector('.card-inner');
-                inner.style.transform = `rotateY(${counterRotate}deg)`;
-            });
+                        <div class="my-m-top-2">
+                            <input type="text" class="form-control neon-input" placeholder="Brano">
+                        </div>
 
-            // Aggiungi active solo a quella cliccata
-            items[index].classList.add('active');
-        }
+                        <button type="submit" class="btn-custom-violet my-m-top-4">
+                            Prenota
+                        </button>
+                    </form>
 
-        // Avvio iniziale
-        window.addEventListener('DOMContentLoaded', () => {
-            // Forza un primo render corretto
-            rotateTo(0);
-
-            // Auto-rotate every 10 seconds
-            setInterval(() => {
-                let nextIndex = (activeIndex + 1) % totalItems;
-                rotateTo(nextIndex);
-            }, 10000);
-        });
-    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END-EVENT-FORM-->
 
 
     <!--START-FOOTER-SECTION-->
@@ -290,6 +276,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- Script to handle 3d carousel -->
+    <script src="js/3d_carousel.js"></script>
 
 </body>
 
