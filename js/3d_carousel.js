@@ -22,25 +22,21 @@ function rotateTo(index) {
 
     // 2. Update each card's inner rotation to counteract turntable rotation
     items.forEach((item, i) => {
-        // Remove active class from all items
         item.classList.remove('active');
-
-        // Measure base angle and counter-rotation
         const baseAngle = i * 90;
         const counterRotate = -(baseAngle + currDeg);
-
-        // Apply counter-rotation
         const inner = item.querySelector('.card-inner');
         inner.style.transform = `rotateY(${counterRotate}deg)`;
     });
 
-    // Add active to the current item
     items[index].classList.add('active');
+
+    startAutoRotate();
 }
 
 // Function to start the auto-rotation timer
 function startAutoRotate() {
-    // Clear any existing timer
+    // Clear any existing timer (reset)
     stopAutoRotate(); 
     
     autoRotateInterval = setInterval(() => {
@@ -51,24 +47,33 @@ function startAutoRotate() {
 
 // Function to stop the auto-rotation timer
 function stopAutoRotate() {
-    clearInterval(autoRotateInterval);
+    if (autoRotateInterval) {
+        clearInterval(autoRotateInterval);
+        autoRotateInterval = null;
+    }
 }
 
 // Initialize carousel on DOMContentLoaded
 window.addEventListener('DOMContentLoaded', () => {
+    // Initialize first rotation
     rotateTo(0);
 
-    // Start auto-rotation
-    startAutoRotate();
+    // Add click listeners to each card
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            // If clicked card is not active, rotate to it
+            if (activeIndex !== index) {
+                rotateTo(index);
+            }
+        });
+    });
 
     // Listen for visibility change events
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) {
-            // If the tab is hidden, stop auto-rotation
             stopAutoRotate();
             console.log("Tab nascosta: rotazione in pausa");
         } else {
-            // If the tab is visible, resume auto-rotation
             startAutoRotate();
             console.log("Tab visibile: rotazione riavviata");
         }

@@ -652,10 +652,10 @@ canvas {
   color: var(--bs-blue);
 }
 
-.card-ghost-text {
-  font-weight: 600;
-  color: var(--bs-white);
+.card-ghost img {
+  filter: drop-shadow(0 0 5px rgba(var(--bs-violet-rgb), 1)) drop-shadow(0 0 8px rgba(var(--bs-violet-rgb), 0.8));
 }
+
 
 /*---EVENT-FORM---*/
 .neon-input {
@@ -709,8 +709,8 @@ canvas {
   }
 
   .section-spacing-bottom {
-  padding-bottom: 6rem;
-}
+    padding-bottom: 6rem;
+  }
 
   .my-row-padding {
     padding-left: 20px;
@@ -849,6 +849,62 @@ canvas {
     flex-direction: column;
     height: 100%;
   }
+
+
+  /*---HORIZONTAL-SCROLL---*/
+  .scroll-container {
+    overflow-x: auto;
+    /* Enables horizontal scroll */
+    overflow-y: hidden;
+    /* Blocks vertical scroll */
+    scroll-snap-type: x mandatory;
+    /* "Magnet" effect when scrolling */
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+
+    /* Hides the scrollbar aesthetically but keeps the function */
+    scrollbar-width: none;
+    /* Firefox */
+    gap: 20px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+  }
+
+  /*---CARD-REVIEW---*/
+  .card-item {
+    /* Fixed size for cards so they don't shrink */
+    flex: 0 0 auto;
+    width: 70vw;
+  }
+
+  /* --- CURSOR AND UX FOR DRAGGING --- */
+  .scroll-container {
+    /* Prevents text selection or image highlighting while dragging */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* IMPORTANT: Prevents the browser from trying to drag the image out when dragging the mouse */
+  .scroll-container img {
+    pointer-events: none;
+  }
+
+  .card-ghost-text {
+    font-weight: 500;
+    color: var(--bs-white);
+  }
+
+  .card-ghost img {
+    filter: drop-shadow(0 0 3px rgba(var(--bs-violet-rgb), 1)) drop-shadow(0 0 8px rgba(var(--bs-violet-rgb), 0.8));
+  }
 }
 
 
@@ -931,5 +987,10 @@ canvas {
   /* IMPORTANT: Prevents the browser from trying to drag the image out when dragging the mouse */
   .scroll-container img {
     pointer-events: none;
+  }
+
+  .card-ghost-text {
+    font-weight: 600;
+    color: var(--bs-white);
   }
 }
