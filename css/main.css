@@ -79,6 +79,10 @@
   padding-top: 12rem;
 }
 
+.section-spacing-bottom {
+  padding-bottom: 12rem;
+}
+
 .inside-spacing {
   margin-top: 6rem;
 }
@@ -646,7 +650,6 @@ canvas {
   border: none;
   box-shadow: none;
   color: var(--bs-blue);
-  width: 50vw;
 }
 
 .card-ghost-text {
@@ -704,6 +707,10 @@ canvas {
   .section-spacing-top {
     padding-top: 6rem;
   }
+
+  .section-spacing-bottom {
+  padding-bottom: 6rem;
+}
 
   .my-row-padding {
     padding-left: 20px;
@@ -866,6 +873,7 @@ canvas {
     padding-left: 30px;
     padding-right: 15px;
   }
+
   .my-gap-card-right {
     padding-right: 30px;
     padding-left: 15px;
@@ -895,15 +903,10 @@ canvas {
     /* Hides the scrollbar aesthetically but keeps the function */
     scrollbar-width: none;
     /* Firefox */
-    gap: 1.5rem;
-  }
+    gap: 30px;
 
-  .scroll-container::after {
-    /* Space at the end of the scroll */
-    content: "";
-    display: block;
-    padding-right: 1.5rem;
-    flex: 0 0 1.5rem;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .scroll-container::-webkit-scrollbar {
@@ -916,7 +919,6 @@ canvas {
     /* Fixed size for cards so they don't shrink */
     flex: 0 0 auto;
     width: 50vw;
-    scroll-snap-align: start;
   }
 
   /* --- CURSOR AND UX FOR DRAGGING --- */
