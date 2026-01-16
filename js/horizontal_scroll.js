@@ -1,35 +1,39 @@
 //ATTENTION: This file is AI generated, even though it was manually reviewed and corrected.
-const slider = document.querySelector('.scroll-container');
-let isDown = false;
-let startX;
-let scrollLeft;
+document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll('.scroll-container');
 
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    // Record the initial position
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
+    // Iterate over each slider to set up individual event listeners
+    sliders.forEach(slider => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            // e.pageX is the X coordinate of the mouse pointer relative to the whole document
+            // slider.offsetLeft is the distance from the left edge of the slider to the left edge of the document
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
 
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
 
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return; // If not clicked, do nothing
-    e.preventDefault();  // Avoid strange behavior
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
 
-    // Calculate how much the mouse has moved
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // * 2 is the speed (increase to scroll faster)
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();  // Avoid default behavior like text selection
 
-    // Applies the scroll
-    slider.scrollLeft = scrollLeft - walk;
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    });
 });
