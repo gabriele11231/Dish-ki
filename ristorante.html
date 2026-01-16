@@ -138,7 +138,7 @@
         <div class="container-fluid g-0 my-row-padding">
             <div class="row align-items-center">
 
-                <div class="col-12 col-xl-6 mb-4 mb-xl-0">
+                <div class="col-12 col-xl-6 mb-4">
                     <div class="img-wrapper h-100">
                         <img src="img/ristorante/esterno.png" alt="Spaceship Dish-Ki" class="img-fluid glow-border">
                     </div>
@@ -184,7 +184,7 @@
     </div>
 
     <!--START-RISTORANTE-THIRD-SECTION-->
-    <section class="section-spacing-top">
+    <section class="section-spacing">
 
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
@@ -206,14 +206,63 @@
     <!--DOTTED-LINE-->
     <div class="yellow-dots-line"></div>
 
+    <!--START-RISTORANTE-FOURTH-SECTION-->
+    <section class="section-spacing canvas-wrapper-desktop d-flex align-items-center">
+
+        <canvas id="canvas-desktop-2"></canvas>
+
+        <div class="container-fluid g-0 my-row-padding">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-xl-4 offset-xl-1 order-2 order-xl-1">
+                    <div class="content-wrapper scroll-lock-mobile">
+
+                        <h2 class="my-m-top-2">
+                            COMFORT E ACUSTICA STELLARE
+                        </h2>
+
+                        <div class="my-p-top-2">
+                            <p>
+                                L'interno del locale brilla di colori e cromature spaziali. Ogni riflesso è studiato per
+                                appagare i vostri sensori ottici mentre mangiate. Il design visivo accompagna il gusto
+                                delle nostre pietanze sonore pregiate. Ricaricatevi immersi in un'estetica che segue il
+                                ritmo del pasto. Sedetevi comodi e godetevi un'esperienza sensoriale completa e
+                                rigenerante.
+                            </p>
+                            <p class="my-p-top-1">
+                                Abbiamo installato pannelli fonoassorbenti alle pareti per garantire un isolamento
+                                acustico totale e puro. I nostri separé offrono la privacy necessaria per godere di ogni
+                                nota senza interferenze esterne. Qui il comfort si unisce alla tecnologia audio avanzata
+                                per un relax assoluto. Nessun rumore disturberà il vostro prezioso banchetto di
+                                frequenze
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-6 offset-xl-1 order-1 order-xl-2 mb-4">
+                    <div class="img-wrapper h-100">
+                        <img src="img/ristorante/tavoli.png" alt="Table Dish-Ki" class="img-fluid glow-border">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+    <!--END-RISTORANTE-FOURTH-SECTION-->
+
 
     <!--CONTINUOUS-LINE-->
     <div class="container-fluid">
         <div class="yellow-continuous-line"></div>
     </div>
 
-    <!--START-RISTORANTE-THIRD-SECTION-->
-    <section class="section-spacing-top">
+    <!--START-RISTORANTE-FIFTH-SECTION-->
+    <section class="section-spacing">
 
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
@@ -230,7 +279,7 @@
         </div>
 
     </section>
-    <!--END-RISTORANTE-THIRD-SECTION-->
+    <!--END-RISTORANTE-FIFTH-SECTION-->
 
     <!--START-FOOTER-SECTION-->
     <footer class="tech-footer">
@@ -299,8 +348,9 @@
         // Ensure the DOM is fully loaded before running the script
         document.addEventListener("DOMContentLoaded", function () {
 
-            // Initialize particle wave animations for both desktop and mobile canvases
+            // Initialize particle wave animations for both sections that has it
             window.addEventListener('load', () => initParticleWave('canvas-desktop', '.canvas-wrapper-desktop', '#FFFB40'));
+            window.addEventListener('load', () => initParticleWave('canvas-desktop-2', '.canvas-wrapper-desktop', '#FFFB40'));
 
         });
     </script>
