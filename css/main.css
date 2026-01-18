@@ -301,6 +301,15 @@ p {
   border: none;
 }
 
+.azure-continuous-line {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--bs-azure);
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px rgba(var(--bs-azure-rgb), 1)) drop-shadow(0 0 5px rgba(var(--bs-azure-rgb), 0.8));
+  border: none;
+}
+
 .yellow-continuous-line {
   width: 100%;
   height: 0.5rem;
@@ -857,18 +866,17 @@ canvas {
 
 .yellow-neon-text {
   text-shadow:
-    0 0 5px var(--bs-yellow),
-    0 0 15px var(--bs-yellow),
-    0 0 20px var(--bs-yellow),
-    0 0 30px var(--bs-yellow);
+    0 0 1px var(--bs-yellow),
+    0 0 3px var(--bs-yellow),
+    0 0 5px var(--bs-yellow);
 }
 
 .azure-neon-text {
   text-shadow:
-    0 0 5px var(--bs-violet),
-    0 0 15px var(--bs-violet),
-    0 0 20px var(--bs-violet),
-    0 0 30px var(--bs-violet);
+    0 0 5px var(--bs-azure),
+    0 0 15px var(--bs-azure),
+    0 0 20px var(--bs-azure),
+    0 0 30px var(--bs-azure);
 }
 
 /*---VERTICAL-SCROLL-LOCK---*/
