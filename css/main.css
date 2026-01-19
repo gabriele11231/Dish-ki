@@ -943,6 +943,7 @@ canvas {
   0% {
     transform: translateX(0);
   }
+
   100% {
     /* Move everything to the left by 50% of its width.
     Since we have 2 identical copies, when the first one ends,
@@ -950,6 +951,31 @@ canvas {
     The brain doesn't notice the jump. */
     transform: translateX(-50%);
   }
+}
+
+
+/*----SINE-WAVE-CANVAS----*/
+.frequency-section-full {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.wave-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Line style */
+#wave-path {
+  fill: none;
+  stroke: var(--bs-azure);
+  stroke-width: 8;
+  vector-effect: non-scaling-stroke;
+
+  /* Glow Neon */
+  filter: drop-shadow(0 0 5px var(--bs-azure)) drop-shadow(0 0 10px rgba(var(--bs-azure-rgb), 0.5)) drop-shadow(0 0 15px rgba(var(--bs-azure-rgb), 1));
 }
 
 
