@@ -359,6 +359,25 @@ p {
     0 0 50px rgba(var(--bs-violet-rgb), 0.6);
 }
 
+.btn-custom-yellow {
+  background-color: var(--bs-yellow);
+  color: var(--bs-blue);
+  font-weight: bold;
+  padding: 1rem 4rem;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0 0 10px rgba(var(--bs-yellow-rgb), 1),
+    0 0 20px rgba(var(--bs-yellow-rgb), 0.8),
+    0 0 30px rgba(var(--bs-yellow-rgb), 0.6);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.btn-custom-yellow:hover {
+  box-shadow: 0 0 30px rgba(var(--bs-yellow-rgb), 1),
+    0 0 40px rgba(var(--bs-yellow-rgb), 0.8),
+    0 0 50px rgba(var(--bs-yellow-rgb), 0.6);
+}
+
 
 /*----CHANGES-NAVBAR----*/
 .navbar-brand {
@@ -712,12 +731,25 @@ canvas {
 .neon-input {
   background-color: var(--bs-white);
   border-radius: 10px;
-  color: #0A0B1A;
+  color: var(--bs-blue);
   font-weight: bold;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 10px rgba(var(--bs-violet-rgb), 1),
     0 0 20px rgba(var(--bs-violet-rgb), 0.8),
     0 0 30px rgba(var(--bs-violet-rgb), 0.6);
+  transition: box-shadow 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-input-yellow {
+  background-color: var(--bs-white);
+  border-radius: 10px;
+  color: var(--bs-blue);
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(var(--bs-yellow-rgb), 1),
+    0 0 20px rgba(var(--bs-yellow-rgb), 0.8),
+    0 0 30px rgba(var(--bs-yellow-rgb), 0.6);
   transition: box-shadow 0.5s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1028,6 +1060,110 @@ canvas {
   padding: 0 1.5rem 1.5rem 1.5rem;
   color: var(--bs-blue);
   font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+}
+
+/*----FORM-PRENOTAZIONE----*/
+/* --- 1. Fix per gli Input Normali (Giorno, Ora, Nome) --- */
+.neon-input-yellow {
+  /* Assicuriamoci che abbiano un padding consistente */
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--bs-white, #FFFFF0);
+  /* Usa il colore crema */
+  color: #333;
+  font-weight: 500;
+
+  box-shadow: 0 0 10px var(--bs-yellow), 0 0 20px rgba(var(--bs-yellow-rgb), 0.4);
+  transition: all 0.3s ease;
+}
+
+/* FIX IMPORTANTE: Stato Focus (Quando clicchi) */
+.neon-input-yellow:focus {
+  background-color: var(--bs-white) !important;
+  color: var(--bs-blue) !important;
+  outline: none !important;
+  box-shadow: 0 0 15px var(--bs-yellow), 0 0 30px rgba(var(--bs-yellow-rgb), 0.6) !important;
+}
+
+/* --- 2. Fix per il Gruppo Persone (Input Group) --- */
+.neon-input-group {
+  background-color: var(--bs-white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+
+  /* FIX ALTEZZA: Aggiungiamo padding verticale per eguagliare gli altri input */
+  padding: 0.5rem 10px;
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente + e - */
+
+  /* Il glow esterno */
+  box-shadow: 0 0 10px var(--bs-yellow), 0 0 20px rgba(var(--bs-yellow-rgb), 0.4);
+}
+
+/* --- 3. Fix per l'Input Interno (Il numero) --- */
+.neon-input-noborder {
+  background-color: transparent !important;
+  border: none !important;
+  color: #333 !important;
+  /* Forza colore scuro */
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: none !important;
+  height: auto;
+  /* Lascia che si adatti */
+  padding: 0;
+  /* Rimuovi padding extra che sballa l'altezza */
+  margin: 0;
+}
+
+/* FIX IMPORTANTE: Quando clicchi sul numero */
+.neon-input-noborder:focus {
+  /* Deve rimanere trasparente, altrimenti copre lo sfondo del gruppo */
+  background-color: transparent !important;
+  color: #333 !important;
+  box-shadow: none !important;
+  /* Nessun alone interno */
+  outline: none !important;
+}
+
+/* Bottoni + e - */
+.neon-input-group button {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  /* Colore base scuro */
+  width: 40px;
+  height: 40px;
+  /* Diamo un'altezza fissa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  /* Remove button borders */
+}
+
+
+/* Cursor hand on bar */
+input[type="date"],
+input[type="time"] {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Personalize icon of calendar (only Webkit: Chrome, Edge, Safari) */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  /* We make it black and bigger */
+  filter: invert(0);
+  width: 25px;
+  height: 25px;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 
