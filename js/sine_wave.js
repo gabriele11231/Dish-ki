@@ -26,7 +26,7 @@ function animate() {
 }
 
 function updateFrequency() {
-    const randomHz = (Math.random() * (500 - 50) + 100).toFixed(2);
+    const randomHz = (Math.random() * (250) + 200).toFixed(2);
     freqText.innerText = randomHz;
 
     //Dynamic adjustment based on screen size
@@ -34,7 +34,7 @@ function updateFrequency() {
 
     if (window.innerWidth < 768) {
         //MOBILE
-        waveDivider = 40000; 
+        waveDivider = 15000; 
     } else {
         //DESKTOP
         waveDivider = 8000; 
