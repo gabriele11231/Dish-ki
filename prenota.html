@@ -110,9 +110,13 @@
 
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
-                <div class="col-12 col-xl-6 offset-xl-3">
-                    <h2>la miglior musica non si ascolta per caso si pianifica <br> compila il form e assaggia il ritmo
-                    </h2>
+                <div class="col-12 col-xl-8 offset-xl-2">
+                    <h2>la miglior musica non si ascolta per caso si pianifica</h2>
+                    <p class="col-12 my-p-top-2 col-xl-6 offset-xl-3">Ricordati che anche i nostri robot devono
+                        processare tutti i
+                        bpm. Il Lunedì siamo in modalità risparmio energetico. Prenota ora per gli altri giorni, ti assicuri
+                        un tavolo riservato ed elimini il buffering all'ingresso. 
+                    </p>
                 </div>
             </div>
         </div>
@@ -146,7 +150,8 @@
                         </div>
 
                         <div class="my-m-top-3">
-                            <input type="time" class="form-control neon-input-yellow" placeholder="Ora" onclick="this.showPicker()">
+                            <input type="time" class="form-control neon-input-yellow" placeholder="Ora"
+                                onclick="this.showPicker()" required>
                         </div>
 
                         <div class="my-m-top-3">
@@ -161,21 +166,21 @@
                         </div>
 
                         <div class="my-m-top-3">
-                            <input type="text" class="form-control neon-input-yellow" placeholder="Nome">
+                            <input type="text" class="form-control neon-input-yellow" placeholder="Nome" required>
                         </div>
 
                         <div class="my-m-top-3">
                             <input type="text" class="form-control neon-input-yellow"
-                                placeholder="Codice Identificativo">
+                                placeholder="Codice Identificativo" required>
                         </div>
 
-                        <button type="submit" class="btn-custom-yellow my-m-top-4">
+                        <button id="btn-prenota" type="submit" class="btn-custom-yellow my-m-top-4">
                             Prenota
                         </button>
                     </form>
                 </div>
 
-                <div class="col-12 col-xl-6 offset-xl-1 my-m-top-4">
+                <div class="col-12 col-xl-6 offset-xl-1 my-m-top-6">
                     <div class="img-wrapper h-100">
                         <img src="img/ristorante/tavoli.png" alt="Table Dish-Ki" class="img-fluid glow-border">
                     </div>
@@ -187,60 +192,29 @@
     </section>
     <!--END-FORM-SECTION-->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    <!--START-SUCCESS-MODAL-->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered my-row-padding">
+            <div class="modal-content modal-box glow-border">
 
-            // --- 1. GESTIONE DATA ---
-            const dateInput = document.getElementById('dateInput');
-            const dateError = document.getElementById('dateError');
+                <div class="modal-body text-center d-flex flex-column justify-content-center align-items-center">
 
-            // Imposta il "min" a oggi (Impedisce date passate)
-            const today = new Date().toISOString().split('T')[0];
-            dateInput.setAttribute('min', today);
+                    <h3 class="title-modal">PRENOTAZIONE RICEVUTA!</h3>
 
-            // Controlla il giorno della settimana quando l'utente cambia data
-            dateInput.addEventListener('input', function (e) {
-                const selectedDate = new Date(this.value);
-                const dayOfWeek = selectedDate.getDay(); // 0 = Domenica, 1 = Lunedì, ...
+                    <p class="my-m-top-2">
+                        La tua prenotazione è stata teletrasportata nei nostri sistemi.<br>
+                        Ti aspettiamo a bordo.
+                    </p>
 
-                // Se è Lunedì (1)
-                if (dayOfWeek === 1) {
-                    // Resetta il campo
-                    this.value = '';
-                    // Mostra messaggio errore
-                    dateError.style.display = 'block';
-                    // (Opzionale) Alert classico
-                    // alert("Siamo chiusi il lunedì!"); 
-                } else {
-                    // Nascondi errore se la data è valida
-                    dateError.style.display = 'none';
-                }
-            });
+                    <button type="button" class="btn-custom-yellow my-m-top-1" data-bs-dismiss="modal">
+                        Ricevuto
+                    </button>
 
-
-            // --- 2. GESTIONE CONTATORE PERSONE ---
-            const btnMinus = document.getElementById('btn-minus');
-            const btnPlus = document.getElementById('btn-plus');
-            const peopleInput = document.getElementById('peopleCount');
-            const minPeople = 1;
-            const maxPeople = 10;
-
-            btnMinus.addEventListener('click', () => {
-                let currentValue = parseInt(peopleInput.value);
-                if (currentValue > minPeople) {
-                    peopleInput.value = currentValue - 1;
-                }
-            });
-
-            btnPlus.addEventListener('click', () => {
-                let currentValue = parseInt(peopleInput.value);
-                if (currentValue < maxPeople) {
-                    peopleInput.value = currentValue + 1;
-                }
-            });
-
-        });
-    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END-SUCCESS-MODAL-->
 
 
     <!--START-FOOTER-SECTION-->
@@ -307,12 +281,24 @@
     <!-- Script for wave animation -->
     <script src="js/dotted_wave.js"></script>
 
+    <!-- Script for form functionalities -->
+    <script src="js/prenota_form.js"></script>
+
+    <!-- Script for alert functionalities -->
+    <script src="js/prenota_alert.js"></script>
+
     <script>
         // Ensure the DOM is fully loaded before running the script
         document.addEventListener("DOMContentLoaded", function () {
 
             // Initialize particle wave animations sections that has it
             window.addEventListener('load', () => initParticleWave('canvas-desktop', '.canvas-wrapper-desktop', '#FFFB40'));
+
+            //Number, and date for form
+            window.addEventListener('load', () => checkForm());
+
+            //Booking form alert
+            window.addEventListener('load', () => setupBookingForm());
 
         });
     </script>
