@@ -1474,6 +1474,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     display: block;
   }
 
+  /*----CHANGES-NAVBAR----*/
+  .navbar-brand {
+    width: calc(40vw - 45px);
+    padding-left: 0.5rem;
+  }
+
+  .navbar-toggler {
+    border: none;
+    color: var(--bs-blue);
+  }
+
+  .navbar-toggler-icon {
+    border: none;
+    color: var(--bs-blue);
+  }
+
+  /*---FREQUENCY-CHANGES---*/
+  .freq-tab {
+    margin-top: 4rem !important;
+  }
+
   /*---HORIZONTAL-SCROLL---*/
   .scroll-container {
     gap: 30px;
