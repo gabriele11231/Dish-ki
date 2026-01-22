@@ -1052,6 +1052,12 @@ canvas {
   content: '-';
 }
 
+/* When the button is open (:not(.collapsed)) */
+.neon-accordion-button:not(.collapsed) {
+  background-color: var(--bs-white);
+  color: var(--bs-blue);
+}
+
 .accordion-header {
   font-size: clamp(1.25rem, 3vw, 1.5625rem);
 }
