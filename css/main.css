@@ -874,26 +874,12 @@ canvas {
 
 
 /*----NUMBER-DINAMIC-CHANGE----*/
-.counter-container {
-  font-family: 'Courier New', monospace;
-  /* O il tuo font tech */
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-.neon-number {
-  font-weight: bold;
-  color: #F4E04D;
-  /* Giallo Neon */
-  text-shadow: 0 0 10px rgba(244, 224, 77, 0.6);
-
-  /* Preparazione per l'animazione di aggiornamento */
-  transition: opacity 0.5s ease-in-out;
+#dynamic-number {
+  transition: opacity 1.5s ease-in-out;
   opacity: 1;
 }
 
-/* Classe che useremo via JS per nascondere il numero durante il cambio */
-.neon-number.fading {
+#dynamic-number.fading {
   opacity: 0;
 }
 
@@ -1214,7 +1200,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     transform: translateY(0px);
   }
 }
-
 
 /*----RESPONSIVE-STYLE----*/
 /*----MOBILE-TABLET-STYLE----*/

@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const intervalTime = 30000; // 30 seconds
     const variancePercent = 0.10; // 10%
 
-    // 1. START (Random Number 0-100)
-    let currentValue = Math.floor(Math.random() * 101);
+    // 1. START
+    let currentValue = Math.floor((Math.random() * (100 - 2 + 1)) + 2); // Random number between 2 and 100
 
     // 2. CALCULATION OF THE MAX "STEP"
     // Calculate 10% of the initial number.
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             numberElement.innerText = currentValue;
             numberElement.classList.remove('fading');
-        }, 500);
+        }, 1500);
     }
 
     // Start the timer only if the initial number > 0 
