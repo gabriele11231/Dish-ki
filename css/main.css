@@ -414,6 +414,13 @@ p {
   transition: text-shadow 0.5s ease-in-out;
 }
 
+.nav-link.active:hover {
+  text-shadow: 0px 0px 5px var(--bs-azure),
+    0px 0px 10px var(--bs-azure),
+    0px 0px 15px var(--bs-azure),
+    0px 0px 20px var(--bs-azure);
+}
+
 
 /*----HERO-SECTION----*/
 .hero-section {
