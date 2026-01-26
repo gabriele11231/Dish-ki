@@ -918,7 +918,7 @@ canvas {
 
 
 /*---VERTICAL-SCROLL-LOCK---*/
-.scroll-lock-mobile {
+.scroll-lock-desktop {
   max-height: 40vh;
   overflow-y: auto;
   overscroll-behavior: auto;
@@ -1215,6 +1215,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     transform: translateY(0px);
   }
 }
+
 
 /*----RESPONSIVE-STYLE----*/
 /*----MOBILE-TABLET-STYLE----*/
@@ -1530,5 +1531,29 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .card-ghost-text {
     font-weight: 600;
     color: var(--bs-white);
+  }
+}
+
+/*---OLD-MONITOR-STYLE---*/
+@media screen and (device-aspect-ratio: 5/4), screen and (device-aspect-ratio: 4/3) {
+
+  .scroll-lock-mobile {
+    max-height: 50vh;
+    overflow-y: auto;
+    overscroll-behavior: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-top: 1rem;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 60%, transparent 100%);
+
+    -webkit-overflow-scrolling: touch;
+
+    padding-bottom: 4vh;
+  }
+
+  .scroll-lock-mobile::-webkit-scrollbar {
+    display: none;
   }
 }
