@@ -70,8 +70,11 @@
 
 
     <!--START-HERO-SECTION-->
-    <div class="container-fluid g-0 hero-section">
+    <div class="container-fluid g-0 hero-section position-relative overflow-hidden">
 
+        <video autoplay muted loop playsinline class="video-bg" id="heroBgVideo">
+            <source src="img/hero_video/station_video.webm" type="video/webm">
+        </video>
         <div class="position-absolute end-0 my-row-padding my-m-top-4 d-flex flex-column align-items-center freq-tab">
 
             <div class="freq-label">
@@ -93,8 +96,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center align-items-center h-100">
-
+        <div class="row justify-content-center align-items-center h-100 position-relative"> 
             <div class="col-12 col-xl-8 my-row-padding">
                 <h1 class="text-center">dish-ki</h1>
                 <h1 class="text-center my-p-top-2">ASSAGGIA IL FUTURO CON IL RITMO DEL PASSATO</h1>
@@ -130,30 +132,33 @@
             <div class="row g-0 my-row-padding my-gap">
 
                 <div class="col">
-                    <model-viewer class="canvas-container glow-violet" src="img/edm_3d.glb" alt="avatar"
-                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%" camera-orbit="0deg 45deg auto">
+                    <model-viewer class="canvas-container glow-violet" src="img/3d/edm_3d.glb" alt="avatar"
+                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%"
+                        camera-orbit="0deg 45deg auto">
                     </model-viewer>
                     <p class="my-p-top-2"> CD iridescenti sprigionano energia quantica, come dischi sacri che contengono
                         sinfonie di codice e ricordi digitali.</p>
                 </div>
 
                 <div class="col">
-                    <model-viewer class="canvas-container glow-azure" src="img/pop_3d.glb" alt="avatar"
-                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%" camera-orbit="0deg 45deg auto">
-                    </model-viewer>
-                    <p class="my-p-top-2">
-                        Un nastro di sapori che si illumina come una playlist retrò-futuristica: trasparente, vibrante e
-                        pronto a riavvolgere emozioni al primo assaggio.
-                    </p>
-                </div>
-
-                <div class="col">
-                    <model-viewer class="canvas-container glow-yellow" src="img/classica_3d.glb" alt="avatar"
-                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%" camera-orbit="0deg 45deg auto">
+                    <model-viewer class="canvas-container glow-yellow" src="img/3d/pop_3d.glb" alt="avatar"
+                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%"
+                        camera-orbit="0deg 45deg auto">
                     </model-viewer>
                     <p class="my-p-top-2">
                         Un vinile che ti accompagna tra onde magnetiche di sapore: ogni solco è un'esaltazione di gusto
                         e vibrazioni.
+                    </p>
+                </div>
+
+                <div class="col">
+                    <model-viewer class="canvas-container glow-azure" src="img/3d/classica_3d.glb" alt="avatar"
+                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%"
+                        camera-orbit="0deg 45deg auto">
+                    </model-viewer>
+                    <p class="my-p-top-2">
+                        Un nastro di sapori che si illumina come una playlist retrò-futuristica: trasparente, vibrante e
+                        pronto a riavvolgere emozioni al primo assaggio.
                     </p>
                 </div>
 
@@ -169,13 +174,13 @@
 
                 <div class="carousel-item active">
                     <div class="d-flex flex-column align-items-center justify-content-center">
-                        <model-viewer class="canvas-container glow-violet" src="img/edm_3d.glb" alt="avatar"
-                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%" camera-orbit="0deg 45deg auto">
+                        <model-viewer class="canvas-container glow-violet" src="img/3d/edm_3d.glb" alt="avatar"
+                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%"
+                            camera-orbit="0deg 45deg auto">
                         </model-viewer>
                         <div class="auto-height-text container-fluid">
                             <p class="my-m-top-1">CD iridescenti sprigionano energia quantica, come dischi sacri che
-                                contengono sinfonie
-                                di codice e ricordi digitali.
+                                contengono sinfonie di codice e ricordi digitali.
                             </p>
                         </div>
                     </div>
@@ -183,13 +188,14 @@
 
                 <div class="carousel-item">
                     <div class="d-flex flex-column align-items-center justify-content-center">
-                        <model-viewer class="canvas-container glow-yellow" src="img/pop_3d.glb" alt="avatar"
-                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%" camera-orbit="0deg 45deg auto">
+                        <model-viewer class="canvas-container glow-yellow" src="img/3d/pop_3d.glb" alt="avatar"
+                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%"
+                            camera-orbit="0deg 45deg auto">
                         </model-viewer>
                         <div class="auto-height-text container-fluid">
                             <p class="my-m-top-1">
-                                I bassi risuonano attraverso il metallo liquido, creando forme che sfidano la gravità e
-                                la logica umana.
+                                Un vinile che ti accompagna tra onde magnetiche di sapore: ogni solco è un'esaltazione
+                                di gusto e vibrazioni.
                             </p>
                         </div>
                     </div>
@@ -197,13 +203,14 @@
 
                 <div class="carousel-item">
                     <div class="d-flex flex-column align-items-center justify-content-center">
-                        <model-viewer class="canvas-container glow-azure" src="img/classica_3d.glb" alt="avatar"
-                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%" camera-orbit="0deg 45deg auto">
+                        <model-viewer class="canvas-container glow-azure" src="img/3d/classica_3d.glb" alt="avatar"
+                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%"
+                            camera-orbit="0deg 45deg auto">
                         </model-viewer>
                         <div class="auto-height-text container-fluid">
                             <p class="my-m-top-1">
-                                Sinfonie dorate che illuminano l'oscurità del cyberspazio con frequenze pure e
-                                inalterate.
+                                Un nastro di sapori che si illumina come una playlist retrò-futuristica: trasparente,
+                                vibrante e pronto a riavvolgere emozioni al primo assaggio.
                             </p>
                         </div>
                     </div>
@@ -226,7 +233,7 @@
     <!--DOTTED-LINE-->
     <div class="azure-dots-line"></div>
 
-    
+
     <!--START-REVIEW-SECTION-DESKTOP-->
     <section class="section-spacing canvas-wrapper-desktop desktop-only">
 
@@ -247,7 +254,7 @@
             <div class="row g-0 my-row-padding justify-content-between">
 
                 <div class="col-3">
-                    <div class="card card-glow h-100">
+                    <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_1.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">emozionante</h4>
@@ -266,7 +273,7 @@
                 </div>
 
                 <div class="col-3">
-                    <div class="card card-glow h-100">
+                    <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_2.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">da consigliare</h4>
@@ -284,7 +291,7 @@
                 </div>
 
                 <div class="col-3">
-                    <div class="card card-glow h-100">
+                    <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_3.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">la miglior final track</h4>
@@ -327,7 +334,7 @@
             <div class="scroll-container d-flex flex-nowrap my-p-block-2">
 
                 <div class="card-item">
-                    <div class="card card-glow h-100">
+                    <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_1.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">emozionante</h4>
@@ -346,7 +353,7 @@
                 </div>
 
                 <div class="card-item">
-                    <div class="card card-glow h-100">
+                    <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_2.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">da consigliare</h4>
@@ -364,7 +371,7 @@
                 </div>
 
                 <div class="card-item">
-                    <div class="card card-glow h-100">
+                    <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_3.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">la miglior final track</h4>
@@ -407,7 +414,7 @@
             <div class="carousel-inner my-row-padding my-p-block-2">
 
                 <div class="carousel-item active">
-                    <div class="card card-glow auto-height-text-rw">
+                    <div class="card card-glow-azure auto-height-text-rw">
                         <img src="img/index/recensione_1.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">emozionante</h4>
@@ -426,7 +433,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card card-glow auto-height-text-rw">
+                    <div class="card card-glow-azure auto-height-text-rw">
                         <img src="img/index/recensione_2.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">da consigliare</h4>
@@ -444,7 +451,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card card-glow auto-height-text-rw">
+                    <div class="card card-glow-azure auto-height-text-rw">
                         <img src="img/index/recensione_3.webp" alt="Recensione Robot 1" class="card-img-custom">
                         <div class="card-body">
                             <h4 class="card-title">la miglior final track</h4>

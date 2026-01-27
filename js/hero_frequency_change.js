@@ -10,7 +10,7 @@ const audioTracks = [
 
 // NEW: Make sure you have these video files (.mp4 is recommended)
 const videoSources = [
-    "videos/video_144Hz.mp4", "videos/video_240Hz.mp4", "videos/video_120Hz.mp4"
+    "../img/hero_video/classica_video.webm", "../img/hero_video/pop_video.webm", "../img/hero_video/edm_video.webm"
 ];
 
 // --- INITIAL STATE ---
