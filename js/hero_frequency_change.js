@@ -1,20 +1,24 @@
 //ATTENTION: This file is AI generated, even though it was manually reviewed and corrected.
 // List of available frequencies
-const frequencies = ["120Hz", "144Hz", "240Hz"];
+const frequencies = ["120Hz", "144Hz", "240Hz", "---"];
 
 const audioTracks = [
     "audio/classic_song.mp3",  // File for 120Hz
     "audio/pop_song.mp3",  // File for 144Hz
     "audio/edm_song.mp3"  // File for 240Hz
+    // No audio for "---"
 ];
 
 // NEW: Make sure you have these video files (.mp4 is recommended)
 const videoSources = [
-    "../img/hero_video/classica_video.webm", "../img/hero_video/pop_video.webm", "../img/hero_video/edm_video.webm"
+    "../img/hero_video/classica_video.webm", 
+    "../img/hero_video/pop_video.webm", 
+    "../img/hero_video/edm_video.webm", 
+    "../img/hero_video/station_video.webm"
 ];
 
 // --- INITIAL STATE ---
-let currentFreqIndex = 0; // Let's start with the first one (60Hz)
+let currentFreqIndex = -1; // Let's start with the first one (60Hz)
 let currentAudio = new Audio();
 // Reference to the video element in HTML
 const heroVideoElement = document.getElementById('heroBgVideo');
