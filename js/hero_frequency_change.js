@@ -3,9 +3,9 @@
 const frequencies = ["120Hz", "144Hz", "240Hz", "---"];
 
 const audioTracks = [
-    "audio/classic_song.mp3",  // File for 120Hz
-    "audio/pop_song.mp3",  // File for 144Hz
-    "audio/edm_song.mp3"  // File for 240Hz
+    "../audio/classic_song.mp3",  // File for 120Hz
+    "../audio/pop_song.mp3",  // File for 144Hz
+    "../audio/edm_song.mp3"  // File for 240Hz
     // No audio for "---"
 ];
 
