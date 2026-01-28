@@ -1,6 +1,6 @@
 //ATTENTION: This file is AI generated, even though it was manually reviewed and corrected.
 // List of available frequencies
-const frequencies = ["120Hz", "144Hz", "240Hz", "---"];
+const frequencies = ["120Hz", "144Hz", "240Hz", "---Hz"];
 
 const audioTracks = [
     "../audio/classic_song.mp3",  // File for 120Hz
@@ -9,7 +9,6 @@ const audioTracks = [
     // No audio for "---"
 ];
 
-// NEW: Make sure you have these video files (.mp4 is recommended)
 const videoSources = [
     "../img/hero_video/classica_video.webm", 
     "../img/hero_video/pop_video.webm", 
@@ -49,6 +48,7 @@ function updateMediaByIndex(index) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
     currentAudio.src = audioTracks[index];
+    currentAudio.loop = true;
     currentAudio.volume = 0.6; // Audio volume
     // Note: Chrome requires a click before playing audio. 
     // At the first click on the arrows, the audio will start.
