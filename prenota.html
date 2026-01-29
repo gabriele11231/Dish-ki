@@ -32,6 +32,9 @@
     <!-- Import Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- Accessibility skip link -->
+    <a href="#PrenotaFirstSection" class="visually-hidden-focusable">Prenota un tavolo spaziale</a>
+
     <!--Div for background noise animation-->
     <div class="bg-noise"></div>
 
@@ -93,18 +96,18 @@
                 Cambia frequenza
             </div>
 
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center" role="group" aria-labelledby="freq-label-text">
 
-                <button class="change-freq" onclick="changeFreq(-1)">
-                    <i class="bi bi-caret-left-fill"></i>
+                <button class="change-freq" onclick="changeFreq(-1)" aria-label="Diminuisci frequenza">
+                    <i class="bi bi-caret-left-fill" aria-hidden="true"></i>
                 </button>
 
-                <span id="freqDisplay" class="freq-value text-center">---Hz</span>
+                <span id="freqDisplay" class="freq-value text-center" aria-live="polite">---Hz</span>
 
-                <button class="change-freq" onclick="changeFreq(1)">
-                    <i class="bi bi-caret-right-fill"></i>
+                <button class="change-freq" onclick="changeFreq(1)" aria-label="Aumenta frequenza">
+                    <i class="bi bi-caret-right-fill" aria-hidden="true"></i>
                 </button>
-
+                
             </div>
         </div>
 
@@ -122,7 +125,7 @@
 
 
     <!--START-FIRST-SECTION-->
-    <section class="section-spacing">
+    <section id="PrenotaFirstSection" class="section-spacing">
 
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
@@ -146,51 +149,55 @@
 
 
     <!--START-FORM-SECTION-->
-    <section class="section-spacing canvas-wrapper-desktop d-flex align-items-center">
+    <section class="section-spacing canvas-wrapper-desktop d-flex align-items-center" aria-labelledby="form-title">
 
-        <canvas id="canvas-desktop"></canvas>
+        <canvas id="canvas-desktop" aria-hidden="true"></canvas>
 
         <div class="container-fluid g-0 my-row-padding">
             <div class="row align-items-center">
 
                 <div class="col-12 col-xl-4 offset-xl-1">
-                    <h3 class="neon-title">
+                    <h3 class="neon-title" id="form-title">
                         form prenotazione
                     </h3>
                     <form id="bookingForm">
 
                         <div class="my-m-top-3">
-                            <span class="form-label">Nome</span>
-                            <input type="text" class="form-control neon-input-yellow" placeholder="C3-PO" required>
+                            <label for="nameInput" class="form-label">Nome</label>
+                            <input type="text" id="nameInput" class="form-control neon-input-yellow" placeholder="C3-PO" required>
                         </div>
 
                         <div class="my-m-top-2">
-                            <span class="form-label">Codice Identificativo</span>
-                            <input type="text" class="form-control neon-input-yellow"
+                            <label for="codeInput" class="form-label">Codice Identificativo</label>
+                            <input type="text" id="codeInput" class="form-control neon-input-yellow"
                                 placeholder="866362" required>
                         </div>
 
                         <div class="my-m-top-2">
-                            <span class="form-label">Giorno</span>
+                            <label for="dateInput" class="form-label">Giorno</label>
                             <input type="date" id="dateInput" class="form-control neon-input-yellow"
-                                placeholder="Giorno" onclick="this.showPicker()" required>
+                                placeholder="Giorno" onclick="this.showPicker()" required aria-label="Seleziona la data della prenotazione">
                         </div>
 
                         <div class="my-m-top-2">
-                            <span class="form-label">Ora</span>
-                            <input type="time" class="form-control neon-input-yellow" placeholder="Ora"
-                                onclick="this.showPicker()" required>
+                            <label for="timeInput" class="form-label">Ora</label>
+                            <input type="time" id="timeInput" class="form-control neon-input-yellow" placeholder="Ora"
+                                onclick="this.showPicker()" required aria-label="Seleziona l'ora della prenotazione">
                         </div>
 
                         <div class="my-m-top-2">
-                            <span class="form-label">Ospiti</span>
+                            <label for="peopleCount" class="form-label">Ospiti</label>
                             <div class="input-group neon-input-group">
-                                <button class="btn btn-link no-decoration" type="button" id="btn-minus">-</button>
+                                <button class="btn btn-link no-decoration" type="button" id="btn-minus" aria-label="Diminuisci numero ospiti">
+                                    <span aria-hidden="true">-</span>
+                                </button>
 
-                                <input type="text" id="peopleCount" class="form-control text-center neon-input-noborder"
-                                    value="1" readonly>
+                                <input type="text" id="peopleCount" class="form-control text-center neon-input-noborder" 
+                                       value="1" readonly aria-live="assertive">
 
-                                <button class="btn btn-link no-decoration" type="button" id="btn-plus">+</button>
+                                <button class="btn btn-link no-decoration" type="button" id="btn-plus" aria-label="Aumenta numero ospiti">
+                                    <span aria-hidden="true">+</span>
+                                </button>
                             </div>
                         </div>
 
@@ -263,12 +270,12 @@
                         <div class="col-6 col-md-12 order-2 order-md-1 text-end mb-xl-3">
                             <div
                                 class="social-icons d-flex flex-column flex-md-row justify-content-end align-items-end align-items-md-center gap-2 gap-md-4">
-                                <a href="http://facebook.com/"><i class="bi bi-facebook"></i></a>
-                                <a href="http://youtube.com"><i class="bi bi-youtube"></i></a>
-                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx"><i
-                                        class="bi bi-instagram"></i></a>
-                                <a href="http://twitter.com"><i class="bi bi-twitter-x"></i></a>
-                                <a href="http://tiktok.com/"><i class="bi bi-tiktok"></i></a>
+                                <a href="http://facebook.com/" aria-label="Visita la nostra pagina Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                                <a href="http://youtube.com" aria-label="Guarda i nostri video Youtube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx" aria-label="Seguici su Instagram" target="_blank" rel="noopener noreferrer"><i
+                                        class="bi bi-instagram" aria-hidden="true"></i></a>
+                                <a href="http://twitter.com" aria-label="Leggi i nostri ultimi Tweet" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+                                <a href="http://tiktok.com/" aria-label="Guarda i nostri ultimi trend su TikTok" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
