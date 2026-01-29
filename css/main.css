@@ -646,13 +646,13 @@ canvas {
 /*----HERO-SECTION----*/
 .hero-section {
   margin-top: -20px;
-  background-color: var(--bs-blue); 
+  background-color: var(--bs-blue);
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 0 0 20px 20px;
   /* Video inside round border */
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .video-bg {
@@ -669,9 +669,10 @@ canvas {
   filter: brightness(0.6);
 }
 
-.freq-tab, .row .change-freq {
-    z-index: 2;
-    position: relative;
+.freq-tab,
+.row .change-freq {
+  z-index: 2;
+  position: relative;
 }
 
 .freq-value {
@@ -905,10 +906,6 @@ canvas {
   color: var(--bs-blue);
 }
 
-.card-ghost img {
-  filter: drop-shadow(0 0 5px rgba(var(--bs-violet-rgb), 1)) drop-shadow(0 0 8px rgba(var(--bs-violet-rgb), 0.8));
-}
-
 /*---Form---*/
 .neon-input-violet {
   background-color: var(--bs-white);
@@ -1057,7 +1054,7 @@ canvas {
 .neon-accordion-item {
   background-color: var(--bs-white);
   border: none;
-  border-radius: 20px !important; 
+  border-radius: 20px !important;
   box-shadow: 0 0 20px var(--bs-azure), 0 0 30px rgba(var(--bs-azure-rgb), 0.5), 0 0 35px rgba(var(--bs-azure-rgb), 1);
   overflow: hidden;
 }
@@ -1383,7 +1380,8 @@ Please forgive us :'( */
   }
 
   .card-ghost img {
-    filter: drop-shadow(0 0 3px rgba(var(--bs-violet-rgb), 1)) drop-shadow(0 0 8px rgba(var(--bs-violet-rgb), 0.8));
+    box-shadow: 0 0 5px rgba(var(--bs-violet-rgb), 1),
+      0 0 18px rgba(var(--bs-violet-rgb), 0.8);
   }
 
 
@@ -1534,7 +1532,7 @@ Please forgive us :'( */
     gap: 5rem;
   }
 
-  
+
   /*---LIBERA-CARD---*/
   .card-item {
     /* Fixed size for cards so they don't shrink */
@@ -1545,6 +1543,11 @@ Please forgive us :'( */
   .card-ghost-text {
     font-weight: 600;
     color: var(--bs-white);
+  }
+
+  .card-ghost img {
+    box-shadow: 0 0 10px rgba(var(--bs-violet-rgb), 1),
+      0 0 25px rgba(var(--bs-violet-rgb), 0.8);
   }
 }
 
