@@ -36,6 +36,9 @@
     <!-- Import Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- Accessibility skip link -->
+    <a href="#MenuFirstSection" class="visually-hidden-focusable">Scopri il nostro menu</a>
+
     <!--Div for background noise animation-->
     <div class="bg-noise"></div>
 
@@ -98,18 +101,18 @@
                 Cambia frequenza
             </div>
 
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center" role="group" aria-labelledby="freq-label-text">
 
-                <button class="change-freq" onclick="changeFreq(-1)">
-                    <i class="bi bi-caret-left-fill"></i>
+                <button class="change-freq" onclick="changeFreq(-1)" aria-label="Diminuisci frequenza">
+                    <i class="bi bi-caret-left-fill" aria-hidden="true"></i>
                 </button>
 
-                <span id="freqDisplay" class="freq-value text-center">---Hz</span>
+                <span id="freqDisplay" class="freq-value text-center" aria-live="polite">---Hz</span>
 
-                <button class="change-freq" onclick="changeFreq(1)">
-                    <i class="bi bi-caret-right-fill"></i>
+                <button class="change-freq" onclick="changeFreq(1)" aria-label="Aumenta frequenza">
+                    <i class="bi bi-caret-right-fill" aria-hidden="true"></i>
                 </button>
-
+                
             </div>
         </div>
 
@@ -127,7 +130,7 @@
 
 
     <!--START-MENU-FIRST-SECTION-->
-    <section class="section-spacing">
+    <section id="MenuFirstSection" class="section-spacing">
 
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
@@ -154,8 +157,6 @@
     <section id="edm" class="section-spacing overflow-hidden">
         <div class="container-fluid g-0">
 
-            <canvas id="canvas-tablet"></canvas>
-
             <div class="container-fluid g-0 justify-content-center">
                 <div class="row my-row-padding g-0">
                     <div class="col-12 justify-content-center">
@@ -173,13 +174,13 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">follow</h4>
-                            <i class="bi bi-rocket-takeoff my-padding-icon allergens violet-neon-text"></i>
-                            <i class="bi bi-headphones my-padding-icon allergens violet-neon-text"></i>
-                            <i class="bi bi-infinity my-padding-icon allergens violet-neon-text"></i>
+                            <i class="bi bi-rocket-takeoff my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Elevato BPM"></i>
+                            <i class="bi bi-headphones my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Livello di Decibel Massimizzato"></i>
+                            <i class="bi bi-infinity my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Effetto Inno"></i>
                             <p class="card-text-menu">Questa traccia è distillata con bassi profondi e synth cristallini
                                 che stimolano i centri di propulsione.</p>
                             <a href="menu/descrizione-piatto-1.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Follow"></a>
                         </div>
                     </div>
                 </div>
@@ -191,11 +192,11 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">animals</h4>
-                            <i class="bi bi-lightning-charge my-padding-icon allergens violet-neon-text"></i>
+                            <i class="bi bi-lightning-charge my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Voltaggio d'Impatto Elevato"></i>
                             <p class="card-text-menu">Il primo piatto per eccellenza, servito con un drop di frequenze
                                 così potenti da poter piegare lo spaziotempo.</p>
                             <a href="menu/descrizione-piatto-1.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Animals"></a>
                         </div>
                     </div>
                 </div>
@@ -207,12 +208,12 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">turn me on</h4>
-                            <i class="bi bi-soundwave my-padding-icon allergens violet-neon-text"></i>
-                            <i class="bi bi-infinity my-padding-icon allergens violet-neon-text"></i>
+                            <i class="bi bi-soundwave my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Bassu Sub-Armonici"></i>
+                            <i class="bi bi-infinity my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Effetto Inno"></i>
                             <p class="card-text-menu">È un secondo piatto compatto ma estremamente potente, un
                                 concentrato di EDM aggressiva...</p>
                             <a href="menu/descrizione-piatto-1.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Turn Me On"></a>
                         </div>
                     </div>
                 </div>
@@ -223,12 +224,12 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">reload</h4>
-                            <i class="bi bi-repeat my-padding-icon allergens violet-neon-text"></i>
-                            <i class="bi bi-headphones my-padding-icon allergens violet-neon-text"></i>
+                            <i class="bi bi-repeat my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Sincronizzazione Motoria Involontaria"></i>
+                            <i class="bi bi-headphones my-padding-icon allergens violet-neon-text" role="img" aria-label="Allergene: Livello di Decibel Massimizz"to></i>
                             <p class="card-text-menu">Un dessert spettacolare e arioso, servito su un lungo nastro ad
                                 alta fedeltà che si srotola come una...</p>
                             <a href="menu/descrizione-piatto-1.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Reload"></a>
                         </div>
                     </div>
                 </div>
@@ -246,8 +247,6 @@
     <section id="pop" class="section-spacing overflow-hidden">
         <div class="container-fluid g-0">
 
-            <canvas id="canvas-tablet"></canvas>
-
             <div class="container-fluid g-0 justify-content-center">
                 <div class="row my-row-padding g-0">
                     <div class="col-12 justify-content-center">
@@ -264,12 +263,12 @@
                                 immediata di sintetizzatori" class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">blinding lights</h4>
-                            <i class="bi bi-lightning charge my-padding-icon allergens yellow-neon-text"></i>
-                            <i class="bi bi-infinity my-padding-icon allergens yellow-neon-text"></i>
+                            <i class="bi bi-lightning-charge my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Voltaggio d'impatto elevato"></i>
+                            <i class="bi bi-infinity my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Effetto Inno"></i>
                             <p class="card-text-menu">Questo CD ad alta velocità di trasferimento offre una scarica
                                 immediata di sintetizzatori...</p>
                             <a href="menu/descrizione-piatto-2.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Blinding Lights"></a>
                         </div>
                     </div>
                 </div>
@@ -281,13 +280,13 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">judas</h4>
-                            <i class="bi bi-infinity my-padding-icon allergens yellow-neon-text"></i>
-                            <i class="bi bi-soundwave my-padding-icon allergens yellow-neon-text"></i>
-                            <i class="bi bi-repeat my-padding-icon allergens yellow-neon-text"></i>
+                            <i class="bi bi-infinity my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Effetto Inno"></i>
+                            <i class="bi bi-soundwave my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Bassi sub-armonici"></i>
+                            <i class="bi bi-repeat my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Sincronizzazione motoria involontaria"></i>
                             <p class="card-text-menu">Un primo piatto analogico estremamente ricco e complesso, servito
                                 su un pesante vinile nero...</p>
                             <a href="menu/descrizione-piatto-2.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Judas"></a>
                         </div>
                     </div>
                 </div>
@@ -298,11 +297,11 @@
                                 guscio trasparente e brillante" class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">just dance</h4>
-                            <i class="bi bi-infinity my-padding-icon allergens yellow-neon-text"></i>
+                            <i class="bi bi-infinity my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Effetto Inno"></i>
                             <p class="card-text-menu">Un secondo piatto servito su una cassetta audio compatta dal
                                 guscio trasparente e brillante. Rispetto...</p>
                             <a href="menu/descrizione-piatto-2.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false"  aria-label="Scopri i dettagli del piatto Just Dance"></a>
                         </div>
                     </div>
                 </div>
@@ -314,12 +313,12 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">save your tears</h4>
-                            <i class="bi bi-bandaid my-padding-icon allergens yellow-neon-text"></i>
-                            <i class="bi bi-repeat my-padding-icon allergens yellow-neon-text"></i>
+                            <i class="bi bi-bandaid my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Tonalità malinconica lieve"></i>
+                            <i class="bi bi-repeat my-padding-icon allergens yellow-neon-text" role="img" aria-label="Allergene: Sincronizzazione motoria involontaria"></i>
                             <p class="card-text-menu">Per chiudere il pasto, un dessert raffinato e complesso servito su
                                 una delicata bobina a nastro...</p>
                             <a href="menu/descrizione-piatto-2.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Save Your Tears"></a>
                         </div>
                     </div>
                 </div>
@@ -336,8 +335,6 @@
     <!--START-CLASSICA-SECTION-->
     <section id="classic" class="section-spacing overflow-hidden">
         <div class="container-fluid g-0">
-
-            <canvas id="canvas-tablet"></canvas>
 
             <div class="container-fluid g-0 justify-content-center">
                 <div class="row my-row-padding g-0">
@@ -356,12 +353,12 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">allegro con brio</h4>
-                            <i class="bi bi-moon-stars my-padding-icon allergens azure-neon-text"></i>
-                            <i class="bi bi-infinity my-padding-icon allergens azure-neon-text"></i>
+                            <i class="bi bi-moon-stars my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Alto tasso di drammaticità armonica"></i>
+                            <i class="bi bi-infinity my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Effetto Inno"></i>
                             <p class="card-text-menu">Un CD classico-quantistico servito su un letto di frequenze pure.
                                 Questo piatto offre un'intensità ritmica...</p>
                             <a href="menu/descrizione-piatto-3.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Allegro con Brio"></a>
                         </div>
                     </div>
                 </div>
@@ -373,11 +370,11 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">palladio allegro</h4>
-                            <i class="bi bi-lightning-charge my-padding-icon allergens azure-neon-text"></i>
+                            <i class="bi bi-lightning-charge my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Voltaggio d'impatto elevato"></i>
                             <p class="card-text-menu">Un vinile neo-classico avvolgente e complesso, la cui texture
                                 analogica è morbida e vellutata al palato...</p>
                             <a href="menu/descrizione-piatto-3.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Palladio Allegro"></a>
                         </div>
                     </div>
                 </div>
@@ -389,13 +386,13 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">estate presto</h4>
-                            <i class="bi bi-moon-stars my-padding-icon allergens azure-neon-text"></i>
-                            <i class="bi bi-lightning-charge my-padding-icon allergens azure-neon-text"></i>
-                            <i class="bi bi-bandaid my-padding-icon allergens azure-neon-text"></i>
+                            <i class="bi bi-moon-stars my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Alto tasso di drammaticità armonica"></i>
+                            <i class="bi bi-lightning-charge my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Voltaggio d'impatto elevato"></i>
+                            <i class="bi bi-bandaid my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Tonalità malinconica lieve"></i>
                             <p class="card-text-menu">Un nastro barocco ad alta velocità, ideale per un robot che cerca
                                 un rush energetico.</p>
                             <a href="menu/descrizione-piatto-3.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Estate Presto"></a>
                         </div>
                     </div>
                 </div>
@@ -407,12 +404,12 @@
                             class="card-img-menu">
                         <div class="card-body">
                             <h4 class="card-title">compitine dun autres</h4>
-                            <i class="bi bi-bandaid my-padding-icon allergens azure-neon-text"></i>
-                            <i class="bi bi-headphones my-padding-icon allergens azure-neon-text"></i>
+                            <i class="bi bi-bandaid my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Tonalità malinconica lieve"></i>
+                            <i class="bi bi-headphones my-padding-icon allergens azure-neon-text" role="img" aria-label="Allergene: Livello di decibel massimizzato"></i>
                             <p class="card-text-menu">La melodia di pianoforte, registrata su nastro analogico, presenta
                                 delle lievi e ricercate fluttuazioni...</p>
                             <a href="menu/descrizione-piatto-3.html" class="stretched-link prevent-drag-click"
-                                draggable="false"></a>
+                                draggable="false" aria-label="Scopri i dettagli del piatto Compitine Dun Autres"></a>
                         </div>
                     </div>
                 </div>
@@ -498,12 +495,12 @@
                         <div class="col-6 col-md-12 order-2 order-md-1 text-end mb-xl-3">
                             <div
                                 class="social-icons d-flex flex-column flex-md-row justify-content-end align-items-end align-items-md-center gap-2 gap-md-4">
-                                <a href="http://facebook.com/"><i class="bi bi-facebook"></i></a>
-                                <a href="http://youtube.com"><i class="bi bi-youtube"></i></a>
-                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx"><i
-                                        class="bi bi-instagram"></i></a>
-                                <a href="http://twitter.com"><i class="bi bi-twitter-x"></i></a>
-                                <a href="http://tiktok.com/"><i class="bi bi-tiktok"></i></a>
+                                <a href="http://facebook.com/" aria-label="Visita la nostra pagina Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                                <a href="http://youtube.com" aria-label="Guarda i nostri video Youtube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx" aria-label="Seguici su Instagram" target="_blank" rel="noopener noreferrer"><i
+                                        class="bi bi-instagram" aria-hidden="true"></i></a>
+                                <a href="http://twitter.com" aria-label="Leggi i nostri ultimi Tweet" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+                                <a href="http://tiktok.com/" aria-label="Guarda i nostri ultimi trend su TikTok" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
