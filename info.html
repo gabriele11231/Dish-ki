@@ -30,6 +30,9 @@
     <!-- Import Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- Accessibility skip link -->
+    <a href="#InfoFirstSection" class="visually-hidden-focusable">Salta il menu e scopri quando siamo aperti</a>
+
     <!--Div for background noise animation-->
     <div class="bg-noise"></div>
 
@@ -119,8 +122,8 @@
     <!--END-HERO-SECTION-->
 
 
-    <!--START-MENU-FIRST-SECTION-->
-    <section class="section-spacing">
+    <!--START-INFO-FIRST-SECTION-->
+    <section id="InfoFirstSection" class="section-spacing">
 
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
@@ -139,7 +142,7 @@
         </div>
 
     </section>
-    <!--END-MENU-FIRST-SECTION-->
+    <!--END-INFO-FIRST-SECTION-->
 
 
     <!--DOTTED-LINE-->
@@ -149,7 +152,7 @@
     <!--START-WAVE-SECTION-->
     <section class="section-spacing canvas-wrapper-desktop">
 
-        <canvas id="canvas-desktop"></canvas>
+        <canvas id="canvas-desktop" aria-hidden="true"></canvas>
 
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
@@ -166,7 +169,7 @@
         </div>
 
 
-        <div class="wave-background frequency-section-full position-relative my-m-top-4">
+        <div class="wave-background frequency-section-full position-relative my-m-top-4" aria-hidden="true">
             <svg id="wave-svg" width="100%" height="100%" viewBox="0 0 2000 200" preserveAspectRatio="none">
                 <path id="wave-path" d="" />
             </svg>
@@ -193,9 +196,9 @@
 
 
     <!--START-FAQ-SECTION-->
-    <section class="faq-section section-spacing my-row-padding">
+    <section class="faq-section section-spacing my-row-padding" aria-labelledby="faq-title">
         <div class="container-fluid g-0 col-12 col-xl-8 offset-xl-2">
-            <h2 class="text-xl-center">debugging musicale<br>le tue domande le nostre risposte</h2>
+            <h2 id="faq-title" class="text-xl-center">debugging musicale<br>le tue domande le nostre risposte</h2>
         </div>
 
         <div class="container-fluid g-0 my-m-top-4 accordion col-12 col-xl-6 offset-xl-3">
@@ -301,12 +304,12 @@
                         <div class="col-6 col-md-12 order-2 order-md-1 text-end mb-xl-3">
                             <div
                                 class="social-icons d-flex flex-column flex-md-row justify-content-end align-items-end align-items-md-center gap-2 gap-md-4">
-                                <a href="http://facebook.com/"><i class="bi bi-facebook"></i></a>
-                                <a href="http://youtube.com"><i class="bi bi-youtube"></i></a>
-                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx"><i
-                                        class="bi bi-instagram"></i></a>
-                                <a href="http://twitter.com"><i class="bi bi-twitter-x"></i></a>
-                                <a href="http://tiktok.com/"><i class="bi bi-tiktok"></i></a>
+                                <a href="http://facebook.com/" aria-label="Visita la nostra pagina Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                                <a href="http://youtube.com" aria-label="Guarda i nostri video Youtube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx" aria-label="Seguici su Instagram" target="_blank" rel="noopener noreferrer"><i
+                                        class="bi bi-instagram" aria-hidden="true"></i></a>
+                                <a href="http://twitter.com" aria-label="Leggi i nostri ultimi Tweet" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+                                <a href="http://tiktok.com/" aria-label="Guarda i nostri ultimi trend su TikTok" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
