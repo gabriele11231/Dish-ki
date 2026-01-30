@@ -308,45 +308,71 @@
     <!--START-FOOTER-SECTION-->
     <footer class="tech-footer">
         <div class="container-fluid">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-5">
 
-                <div class="col-12 col-md-6 order-2 order-md-1 text-start mt-4 mt-md-0">
-                    <div class="logo-wrapper d-flex align-items-center mb-2">
-
-                        <a href="index.html" class="me-3">
-                            <img src="img/logo.png" alt="Logo Dish-ki - Ristorante Futuristico musicale" class="footer-logo-img">
+                <div class="col-12 col-xl-4 order-1 text-center text-xxl-start">
+                    <div class="logo-wrapper d-inline-flex align-items-center mb-2">
+                        <a href="index.html" class="me-0 me-xl-3">
+                            <img src="img/logo.png" alt="Logo Dish-ki - Ristorante Futuristico musicale"
+                                class="footer-logo-img">
                         </a>
                     </div>
-
                     <div class="copyright-text">
                         Copyright 2026 Dish-ki S.p.A.
                     </div>
                 </div>
 
 
-                <div class="col-12 col-md-6 order-1 order-md-2">
-                    <div class="row">
+                <div class="col-12 col-xxl-4 order-2 text-center">
 
-                        <div class="col-6 col-md-12 order-2 order-md-1 text-end mb-xl-3">
-                            <div class="col-6 col-md-12 order-2 order-md-1 text-end mb-xl-3">
+                    <div class="d-inline-block">
+                        <div class="dropup">
+                            <button class="btn btn-lang dropdown-toggle d-flex align-items-center gap-2" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleziona la lingua">
+                                <i class="bi bi-globe" aria-hidden="true"></i>
+                                <span id="currentLangLabel">IT</span>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-menu-dark glow-border-azure">
+                                <li><button class="dropdown-item" onclick="changeLanguage('it')">Italiano</button></li>
+                                <li><button class="dropdown-item" onclick="changeLanguage('en')">English</button></li>
+                                <li><button class="dropdown-item" onclick="changeLanguage('morse_it')">Morse
+                                        (IT)</button></li>
+                                <li><button class="dropdown-item" onclick="changeLanguage('morse_en')">Morse
+                                        (EN)</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-xl-4 order-3 text-center text-xl-end">
+                    <div class="row justify-content-center justify-content-xl-end">
+
+                        <div class="col-12 mb-3">
                             <div
-                                class="social-icons d-flex flex-column flex-md-row justify-content-end align-items-end align-items-md-center gap-2 gap-md-4">
-                                <a href="http://facebook.com/" aria-label="Visita la nostra pagina Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                                <a href="http://youtube.com" aria-label="Guarda i nostri video Youtube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx" aria-label="Seguici su Instagram" target="_blank" rel="noopener noreferrer"><i
+                                class="social-icons d-flex justify-content-center justify-content-xl-end align-items-center gap-5">
+                                <a href="http://facebook.com/" aria-label="Facebook" target="_blank"
+                                    rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                                <a href="http://youtube.com" aria-label="Youtube" target="_blank"
+                                    rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx"
+                                    aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
                                         class="bi bi-instagram" aria-hidden="true"></i></a>
-                                <a href="http://twitter.com" aria-label="Leggi i nostri ultimi Tweet" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-                                <a href="http://tiktok.com/" aria-label="Guarda i nostri ultimi trend su TikTok" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+                                <a href="http://twitter.com" aria-label="Twitter" target="_blank"
+                                    rel="noopener noreferrer"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+                                <a href="http://tiktok.com/" aria-label="TikTok" target="_blank"
+                                    rel="noopener noreferrer"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
                             </div>
                         </div>
-                        </div>
 
-                        <div class="col-6 col-md-12 order-1 order-md-2 text-start text-md-end">
+                        <div class="col-12">
                             <div
-                                class="footer-links d-flex flex-column flex-md-row justify-content-md-end gap-1 gap-md-4 h-100 justify-content-between">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#footerModal">Privacy Policy</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#footerModal">Terms</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#footerModal">Cookie Policy</a>
+                                class="footer-links d-flex flex-wrap justify-content-center justify-content-xl-end gap-3 gap-md-4">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal">Privacy Policy</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal">Terms</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal">Cookie Policy</a>
                                 <a href="info.html">Contact</a>
                             </div>
                         </div>
