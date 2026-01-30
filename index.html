@@ -36,7 +36,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Accessibility skip link -->
-    <a href="#HeroSection" class="visually-hidden-focusable">Salta il menu e vai alla hero section</a>
+    <a href="#HeroSection" class="visually-hidden-focusable" data-i18n="index_1">Salta il menu e vai alla hero
+        section</a>
 
     <!--Div for background noise animation-->
     <div class="bg-noise"></div>
@@ -47,10 +48,11 @@
         <div class="container-fluid">
 
             <a href="index.html"><img class="navbar-brand" src="img/logo.png"
-                    alt="Logo Dish-ki - Ristorante Futuristico musicale"></a>
+                    alt="Logo Dish-ki - Ristorante Futuristico musicale" data-i18n-alt="index_alt_1"></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                data-i18n-aria="index_aria_1">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -58,27 +60,27 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#" data-i18n="index_2">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="ristorante.html">Ristorante</a>
+                        <a class="nav-link" href="ristorante.html" data-i18n="index_3">Ristorante</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="menu.html">Menu</a>
+                        <a class="nav-link" href="menu.html" data-i18n="index_4">Menu</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="info.html">Info</a>
+                        <a class="nav-link" href="info.html" data-i18n="index_5">Info</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="prenota.html">Prenota</a>
+                        <a class="nav-link" href="prenota.html" data-i18n="index_6">Prenota</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="pagina-libera.html">Evento</a>
+                        <a class="nav-link" href="pagina-libera.html" data-i18n="index_7">Evento</a>
                     </li>
 
                 </ul>
@@ -96,29 +98,31 @@
         </video>
         <div class="position-absolute end-0 my-row-padding my-m-top-4 d-flex flex-column align-items-center freq-tab">
 
-            <div class="freq-label">
+            <div class="freq-label" data-i18n="index_8">
                 Cambia frequenza
             </div>
 
             <div class="d-flex align-items-center" role="group" aria-labelledby="freq-label-text">
 
-                <button class="change-freq" onclick="changeFreq(-1)" aria-label="Diminuisci frequenza">
+                <button class="change-freq" onclick="changeFreq(-1)" aria-label="Diminuisci frequenza"
+                    data-i18n-aria="index_aria_2">
                     <i class="bi bi-caret-left-fill" aria-hidden="true"></i>
                 </button>
 
                 <span id="freqDisplay" class="freq-value text-center" aria-live="polite">---Hz</span>
 
-                <button class="change-freq" onclick="changeFreq(1)" aria-label="Aumenta frequenza">
+                <button class="change-freq" onclick="changeFreq(1)" aria-label="Aumenta frequenza"
+                    data-i18n-aria="index_aria_3">
                     <i class="bi bi-caret-right-fill" aria-hidden="true"></i>
                 </button>
-                
+
             </div>
         </div>
 
         <div class="row justify-content-center align-items-center h-100 position-relative">
             <div class="col-12 col-xl-8 my-row-padding">
                 <h1 class="text-center">dish-ki</h1>
-                <h1 class="text-center my-p-top-2">ASSAGGIA IL FUTURO CON IL RITMO DEL PASSATO</h1>
+                <h1 class="text-center my-p-top-2" data-i18n="index_9">ASSAGGIA IL FUTURO CON IL RITMO DEL PASSATO</h1>
             </div>
 
         </div>
@@ -133,9 +137,10 @@
         <div class="container-fluid g-0 justify-content-center text-xl-center">
             <div class="row my-row-padding g-0">
                 <div class="col-12 text-xl-center justify-content-center">
-                    <h2 class="col-12 col-xl-8 offset-xl-2">piatti che suonano forte</h2>
+                    <h2 class="col-12 col-xl-8 offset-xl-2" data-i18n="index_10">piatti che suonano forte</h2>
 
-                    <p class="col-12 my-p-top-2 col-xl-6 offset-xl-3">Un menù che mixa nostalgia analogica e gusto
+                    <p class="col-12 my-p-top-2 col-xl-6 offset-xl-3" data-i18n="index_11">Un menù che mixa nostalgia
+                        analogica e gusto
                         futuristico.
                         Sapori che mandano in tilt i circuiti, dai vinili alle cassette.</p>
                 </div>
@@ -152,19 +157,22 @@
 
                 <div class="col">
                     <model-viewer class="canvas-container glow-violet" src="img/3d/edm_3d.glb"
-                        alt="Piatto futuristico ispirato alla musica EDM con CD iridescenti" shadow-intensity="1"
-                        auto-rotate auto-rotate-delay="0" rotation-per-second="300%" camera-orbit="0deg 45deg auto">
+                        alt="Piatto futuristico ispirato alla musica EDM con CD iridescenti" data-i18n-alt="index_alt_2"
+                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%"
+                        camera-orbit="0deg 45deg auto">
                     </model-viewer>
-                    <p class="my-p-top-2"> CD iridescenti sprigionano energia quantica, come dischi sacri che contengono
+                    <p class="my-p-top-2" data-i18n="index_12"> CD iridescenti sprigionano energia quantica, come dischi
+                        sacri che contengono
                         sinfonie di codice e ricordi digitali.</p>
                 </div>
 
                 <div class="col">
                     <model-viewer class="canvas-container glow-yellow" src="img/3d/pop_3d.glb"
-                        alt="Piatto creativo ispirato alla musica POP su vinile" shadow-intensity="1" auto-rotate
-                        auto-rotate-delay="0" rotation-per-second="300%" camera-orbit="0deg 45deg auto">
+                        alt="Piatto creativo ispirato alla musica POP su vinile" data-i18n-alt="index_alt_3"
+                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%"
+                        camera-orbit="0deg 45deg auto">
                     </model-viewer>
-                    <p class="my-p-top-2">
+                    <p class="my-p-top-2" data-i18n="index_13">
                         Un vinile che ti accompagna tra onde magnetiche di sapore: ogni solco è un'esaltazione di gusto
                         e vibrazioni.
                     </p>
@@ -172,10 +180,11 @@
 
                 <div class="col">
                     <model-viewer class="canvas-container glow-azure" src="img/3d/classica_3d.glb"
-                        alt="Esperienza gastronomica Musica Classica con nastri magnetici" shadow-intensity="1"
-                        auto-rotate auto-rotate-delay="0" rotation-per-second="300%" camera-orbit="0deg 45deg auto">
+                        alt="Esperienza gastronomica Musica Classica con nastri magnetici" data-i18n-alt="index_alt_4"
+                        shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="300%"
+                        camera-orbit="0deg 45deg auto">
                     </model-viewer>
-                    <p class="my-p-top-2">
+                    <p class="my-p-top-2" data-i18n="index_14">
                         Un nastro di sapori che si illumina come una playlist retrò-futuristica: trasparente, vibrante e
                         pronto a riavvolgere emozioni al primo assaggio.
                     </p>
@@ -194,11 +203,13 @@
                 <div class="carousel-item active">
                     <div class="d-flex flex-column align-items-center justify-content-center">
                         <model-viewer class="canvas-container glow-violet" src="img/3d/edm_3d.glb"
-                            alt="Piatto futuristico ispirato alla musica EDM con CD iridescenti" shadow-intensity="1"
-                            auto-rotate auto-rotate-delay="0" rotation-per-second="500%" camera-orbit="0deg 45deg auto">
+                            alt="Piatto futuristico ispirato alla musica EDM con CD iridescenti"
+                            data-i18n-alt="index_alt_2" shadow-intensity="1" auto-rotate auto-rotate-delay="0"
+                            rotation-per-second="500%" camera-orbit="0deg 45deg auto">
                         </model-viewer>
                         <div class="auto-height-text container-fluid">
-                            <p class="my-m-top-1">CD iridescenti sprigionano energia quantica, come dischi sacri che
+                            <p class="my-m-top-1" data-i18n="index_12">CD iridescenti sprigionano energia quantica, come
+                                dischi sacri che
                                 contengono sinfonie di codice e ricordi digitali.
                             </p>
                         </div>
@@ -208,11 +219,12 @@
                 <div class="carousel-item">
                     <div class="d-flex flex-column align-items-center justify-content-center">
                         <model-viewer class="canvas-container glow-yellow" src="img/3d/pop_3d.glb"
-                            alt="Piatto creativo ispirato alla musica POP su vinile" shadow-intensity="1" auto-rotate
-                            auto-rotate-delay="0" rotation-per-second="500%" camera-orbit="0deg 45deg auto">
+                            alt="Piatto creativo ispirato alla musica POP su vinile" data-i18n-alt="index_alt_3"
+                            shadow-intensity="1" auto-rotate auto-rotate-delay="0" rotation-per-second="500%"
+                            camera-orbit="0deg 45deg auto">
                         </model-viewer>
                         <div class="auto-height-text container-fluid">
-                            <p class="my-m-top-1">
+                            <p class="my-m-top-1" data-i18n="index_13">
                                 Un vinile che ti accompagna tra onde magnetiche di sapore: ogni solco è un'esaltazione
                                 di gusto e vibrazioni.
                             </p>
@@ -223,11 +235,12 @@
                 <div class="carousel-item">
                     <div class="d-flex flex-column align-items-center justify-content-center">
                         <model-viewer class="canvas-container glow-azure" src="img/3d/classica_3d.glb"
-                            alt="Esperienza gastronomica Musica Classica con nastri magnetici" shadow-intensity="1"
-                            auto-rotate auto-rotate-delay="0" rotation-per-second="500%" camera-orbit="0deg 45deg auto">
+                            alt="Esperienza gastronomica Musica Classica con nastri magnetici"
+                            data-i18n-alt="index_alt_4" shadow-intensity="1" auto-rotate auto-rotate-delay="0"
+                            rotation-per-second="500%" camera-orbit="0deg 45deg auto">
                         </model-viewer>
                         <div class="auto-height-text container-fluid">
-                            <p class="my-m-top-1">
+                            <p class="my-m-top-1" data-i18n="index_14">
                                 Un nastro di sapori che si illumina come una playlist retrò-futuristica: trasparente,
                                 vibrante e pronto a riavvolgere emozioni al primo assaggio.
                             </p>
@@ -261,10 +274,11 @@
         <div class="container-fluid g-0 text-center">
             <div class="row my-row-padding g-0 my-gap justify-content-between">
                 <div class="col-12">
-                    <h2 class="col-8 offset-2">RECENSIONI A TUTTO VOLUME</h2>
-                    <h3>NON FARTELO RACCONTARE</h3>
+                    <h2 class="col-8 offset-2" data-i18n="index_18">RECENSIONI A TUTTO VOLUME</h2>
+                    <h3 data-i18n="index_19">NON FARTELO RACCONTARE</h3>
 
-                    <p class="my-p-top-2 col-6 offset-3">Dalle onde magnetiche alle emozioni sensoriali:
+                    <p class="my-p-top-2 col-6 offset-3" data-i18n="index_20">Dalle onde magnetiche alle emozioni
+                        sensoriali:
                         lasciati trasportare anche tu dal gusto!</p>
                 </div>
             </div>
@@ -276,17 +290,20 @@
                 <div class="col-3">
                     <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_1.webp"
-                            alt="Cliente soddisfatto non vede l'ora di tornare da Dish-ki" class="card-img-custom">
+                            alt="Cliente soddisfatto non vede l'ora di tornare da Dish-ki" class="card-img-custom"
+                            data-i18n-alt="index_alt_8">
                         <div class="card-body">
-                            <h4 class="card-title">emozionante</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5">
+                            <h4 class="card-title" data-i18n="index_21">emozionante</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5"
+                                data-i18n-aria="index_aria_7">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Il circuito dorato è energia pura: ogni filo intrecciato è stato un
+                            <p class="card-text" data-i18n="index_22">Il circuito dorato è energia pura: ogni filo
+                                intrecciato è stato un
                                 assaggio celestiale.
                                 Non vedo l'ora di tornarci, personale gentile e disponibile.</p>
                         </div>
@@ -296,17 +313,19 @@
                 <div class="col-3">
                     <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_2.webp" alt="Cliente soddisfatto consigliera Dish-ki ad amici"
-                            class="card-img-custom">
+                            class="card-img-custom" data-i18n-alt="index_alt_9">
                         <div class="card-body">
-                            <h4 class="card-title">da consigliare</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5">
+                            <h4 class="card-title" data-i18n="index_23">da consigliare</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5"
+                                data-i18n-aria="index_aria_8">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Lo consiglierò senza dubbi ai miei amici, non è semplicemente cibo... è
+                            <p class="card-text" data-i18n="index_24">Lo consiglierò senza dubbi ai miei amici, non è
+                                semplicemente cibo... è
                                 un'esperienza di vita tra onde di gusto e ricordi di quando ero giovane.</p>
                         </div>
                     </div>
@@ -315,17 +334,20 @@
                 <div class="col-3">
                     <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_3.webp"
-                            alt="Cliente soddisfatto per l'ottima qualità-prezzo del locale" class="card-img-custom">
+                            alt="Cliente soddisfatto per l'ottima qualità-prezzo del locale" class="card-img-custom"
+                            data-i18n-alt="index_alt_10">
                         <div class="card-body">
-                            <h4 class="card-title">la miglior final track</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 4 su 5">
+                            <h4 class="card-title" data-i18n="index_25">la miglior final track</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 4 su 5"
+                                data-i18n-aria="index_aria_9">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot empty" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Il menù offre sempre tutti i miglior piatti all'ultimo grido, ottima
+                            <p class="card-text" data-i18n="index_26">Il menù offre sempre tutti i miglior piatti
+                                all'ultimo grido, ottima
                                 qualità-prezzo. Il dessert è una certezza vibrante, una traccia sensoriale.</p>
                         </div>
                     </div>
@@ -346,10 +368,11 @@
             <div class="container-fluid g-0 justify-content-center">
                 <div class="row my-row-padding g-0">
                     <div class="col-12 justify-content-center">
-                        <h2 class="col-12">RECENSIONI A TUTTO VOLUME</h2>
-                        <h3>NON FARTELO RACCONTARE</h3>
+                        <h2 class="col-12" data-i18n="index_27">RECENSIONI A TUTTO VOLUME</h2>
+                        <h3 data-i18n="index_28">NON FARTELO RACCONTARE</h3>
 
-                        <p class="my-p-top-1 col-12">Dalle onde magnetiche alle emozioni sensoriali:
+                        <p class="my-p-top-1 col-12" data-i18n="index_20">Dalle onde magnetiche alle emozioni
+                            sensoriali:
                             lasciati trasportare anche tu dal gusto!</p>
                     </div>
                 </div>
@@ -360,17 +383,20 @@
                 <div class="card-item">
                     <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_1.webp"
-                            alt="Cliente soddisfatto non vede l'ora di tornare da Dish-ki" class="card-img-custom">
+                            alt="Cliente soddisfatto non vede l'ora di tornare da Dish-ki" class="card-img-custom"
+                            data-i18n-alt="index_alt_8">
                         <div class="card-body">
-                            <h4 class="card-title">emozionante</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5">
+                            <h4 class="card-title" data-i18n="index_21">emozionante</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5"
+                                data-i18n-aria="index_aria_7">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Il circuito dorato è energia pura: ogni filo intrecciato è stato un
+                            <p class="card-text" data-i18n="index_22">Il circuito dorato è energia pura: ogni filo
+                                intrecciato è stato un
                                 assaggio celestiale.
                                 Non vedo l'ora di tornarci, personale gentile e disponibile.</p>
                         </div>
@@ -380,17 +406,19 @@
                 <div class="card-item">
                     <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_2.webp" alt="Cliente soddisfatto consigliera Dish-ki ad amici"
-                            class="card-img-custom">
+                            class="card-img-custom" data-i18n-alt="index_alt_9">
                         <div class="card-body">
-                            <h4 class="card-title">da consigliare</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5">
+                            <h4 class="card-title" data-i18n="index_23">da consigliare</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5"
+                                data-i18n-aria="index_aria_8">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Lo consiglierò senza dubbi ai miei amici, non è semplicemente cibo... è
+                            <p class="card-text" data-i18n="index_24">Lo consiglierò senza dubbi ai miei amici, non è
+                                semplicemente cibo... è
                                 un'esperienza di vita tra onde di gusto e ricordi di quando ero giovane.</p>
                         </div>
                     </div>
@@ -399,17 +427,20 @@
                 <div class="card-item">
                     <div class="card card-glow-azure h-100">
                         <img src="img/index/recensione_3.webp"
-                            alt="Cliente soddisfatto per l'ottima qualità-prezzo del locale" class="card-img-custom">
+                            alt="Cliente soddisfatto per l'ottima qualità-prezzo del locale" class="card-img-custom"
+                            data-i18n-alt="index_alt_10">
                         <div class="card-body">
-                            <h4 class="card-title">la miglior final track</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 4 su 5">
+                            <h4 class="card-title" data-i18n="index_25">la miglior final track</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 4 su 5"
+                                data-i18n-aria="index_aria_9">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot empty" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Il menù offre sempre tutti i miglior piatti all'ultimo grido, ottima
+                            <p class="card-text" data-i18n="index_26">Il menù offre sempre tutti i miglior piatti
+                                all'ultimo grido, ottima
                                 qualità-prezzo. Il dessert è una certezza vibrante, una traccia sensoriale.</p>
                         </div>
                     </div>
@@ -428,10 +459,10 @@
         <div class="container-fluid g-0 justify-content-center">
             <div class="row my-row-padding g-0">
                 <div class="col-12 justify-content-center">
-                    <h2 class="col-12">RECENSIONI A TUTTO VOLUME</h2>
-                    <h3>NON FARTELO RACCONTARE</h3>
+                    <h2 class="col-12" data-i18n="index_27">RECENSIONI A TUTTO VOLUME</h2>
+                    <h3 data-i18n="index_28">NON FARTELO RACCONTARE</h3>
 
-                    <p class="my-p-top-1 col-12">Dalle onde magnetiche alle emozioni sensoriali:
+                    <p class="my-p-top-1 col-12" data-i18n="index_20">Dalle onde magnetiche alle emozioni sensoriali:
                         lasciati trasportare anche tu dal gusto!</p>
                 </div>
             </div>
@@ -444,17 +475,20 @@
                 <div class="carousel-item active">
                     <div class="card card-glow-azure auto-height-text-rw">
                         <img src="img/index/recensione_1.webp"
-                            alt="Cliente soddisfatto non vede l'ora di tornare da Dish-ki" class="card-img-custom">
+                            alt="Cliente soddisfatto non vede l'ora di tornare da Dish-ki" class="card-img-custom"
+                            data-i18n-alt="index_alt_8">
                         <div class="card-body">
-                            <h4 class="card-title">emozionante</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5">
+                            <h4 class="card-title" data-i18n="index_21">emozionante</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5"
+                                data-i18n-aria="index_aria_7">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Il circuito dorato è energia pura: ogni filo intrecciato è stato un
+                            <p class="card-text" data-i18n="index_22">Il circuito dorato è energia pura: ogni filo
+                                intrecciato è stato un
                                 assaggio celestiale.
                                 Non vedo l'ora di tornarci, personale gentile e disponibile.</p>
                         </div>
@@ -464,17 +498,19 @@
                 <div class="carousel-item">
                     <div class="card card-glow-azure auto-height-text-rw">
                         <img src="img/index/recensione_2.webp" alt="Cliente soddisfatto consigliera Dish-ki ad amici"
-                            class="card-img-custom">
+                            class="card-img-custom" data-i18n-alt="index_alt_9">
                         <div class="card-body">
-                            <h4 class="card-title">da consigliare</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5">
+                            <h4 class="card-title" data-i18n="index_23">da consigliare</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 5 su 5"
+                                data-i18n-aria="index_aria_8">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Lo consiglierò senza dubbi ai miei amici, non è semplicemente cibo... è
+                            <p class="card-text" data-i18n="index_24">Lo consiglierò senza dubbi ai miei amici, non è
+                                semplicemente cibo... è
                                 un'esperienza di vita tra onde di gusto e ricordi di quando ero giovane.</p>
                         </div>
                     </div>
@@ -483,17 +519,20 @@
                 <div class="carousel-item">
                     <div class="card card-glow-azure auto-height-text-rw">
                         <img src="img/index/recensione_3.webp"
-                            alt="Cliente soddisfatto per l'ottima qualità-prezzo del locale" class="card-img-custom">
+                            alt="Cliente soddisfatto per l'ottima qualità-prezzo del locale" class="card-img-custom"
+                            data-i18n-alt="index_alt_10">
                         <div class="card-body">
-                            <h4 class="card-title">la miglior final track</h4>
-                            <div class="rating-dots" role="img" aria-label="Valutazione 4 su 5">
+                            <h4 class="card-title" data-i18n="index_25">la miglior final track</h4>
+                            <div class="rating-dots" role="img" aria-label="Valutazione 4 su 5"
+                                data-i18n-aria="index_aria_9">
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot" aria-hidden="true"></span>
                                 <span class="dot empty" aria-hidden="true"></span>
                             </div>
-                            <p class="card-text">Il menù offre sempre tutti i miglior piatti all'ultimo grido, ottima
+                            <p class="card-text" data-i18n="index_26">Il menù offre sempre tutti i miglior piatti
+                                all'ultimo grido, ottima
                                 qualità-prezzo. Il dessert è una certezza vibrante, una traccia sensoriale.</p>
                         </div>
                     </div>
@@ -504,13 +543,14 @@
             <div class="carousel-indicators position-relative">
 
                 <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="0"
-                    class="active dot-indicator dot-azure" aria-current="true" aria-label="Slide 1"></button>
+                    class="active dot-indicator dot-azure" aria-current="true" aria-label="Slide 1"
+                    data-i18n-aria="index_aria_4"></button>
 
                 <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="1"
-                    class="dot-indicator dot-azure" aria-label="Slide 2"></button>
+                    class="dot-indicator dot-azure" aria-label="Slide 2" data-i18n-aria="index_aria_5"></button>
 
                 <button type="button" data-bs-target="#carousel-review" data-bs-slide-to="2"
-                    class="dot-indicator dot-azure" aria-label="Slide 3"></button>
+                    class="dot-indicator dot-azure" aria-label="Slide 3" data-i18n-aria="index_aria_6"></button>
             </div>
 
         </div>
@@ -528,9 +568,10 @@
         <div class="container-fluid g-0 text-xl-center">
             <div class="row my-row-padding g-0 my-gap justify-content-between">
                 <div class="col-12">
-                    <h2 class="col-12 col-xl-8 offset-xl-2">prenota la tua traccia di gusto</h2>
+                    <h2 class="col-12 col-xl-8 offset-xl-2" data-i18n="index_45">prenota la tua traccia di gusto</h2>
 
-                    <p class="col-12 col-xl-6 offset-xl-3 my-p-top-2">Accendi i sensori e non fartelo raccontare! <br>
+                    <p class="col-12 col-xl-6 offset-xl-3 my-p-top-2" data-i18n="index_46">Accendi i sensori e non
+                        fartelo raccontare! <br>
                         Trova la
                         frequenza, lasciati trasportare dalle onde magnetiche del sapore: il prossimo assaggio è già
                         pronto, inciso come una traccia unica, e aspetta solo te. Basta un click per entrare nel ritmo
@@ -539,7 +580,8 @@
             </div>
         </div>
 
-        <a href="prenota.html" class="btn-custom-azure mx-auto d-table my-m-top-2 text-decoration-none text-center">
+        <a href="prenota.html" class="btn-custom-azure mx-auto d-table my-m-top-2 text-decoration-none text-center"
+            data-i18n="index_47">
             Prenota
         </a>
 
@@ -550,45 +592,83 @@
     <!--START-FOOTER-SECTION-->
     <footer class="tech-footer">
         <div class="container-fluid">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-5">
 
-                <div class="col-12 col-md-6 order-2 order-md-1 text-start mt-4 mt-md-0">
-                    <div class="logo-wrapper d-flex align-items-center mb-2">
-
-                        <a href="index.html" class="me-3">
+                <div class="col-12 col-xxl-4 order-1 text-center text-xxl-start">
+                    <div class="logo-wrapper d-inline-flex align-items-center mb-2">
+                        <a href="index.html" class="me-0 me-xxl-3">
                             <img src="img/logo.png" alt="Logo Dish-ki - Ristorante Futuristico musicale"
-                                class="footer-logo-img">
+                                class="footer-logo-img" data-i18n-alt="index_alt_1">
                         </a>
                     </div>
-
-                    <div class="copyright-text">
+                    <div class="copyright-text" data-i18n="index_48">
                         Copyright 2026 Dish-ki S.p.A.
                     </div>
                 </div>
 
 
-                <div class="col-12 col-md-6 order-1 order-md-2">
-                    <div class="row">
+                <div class="col-12 col-xxl-4 order-2 text-center">
 
-                        <div class="col-6 col-md-12 order-2 order-md-1 text-end mb-xl-3">
+                    <div class="d-inline-block">
+                        <div class="dropup">
+                            <button class="btn btn-lang dropdown-toggle d-flex align-items-center gap-2" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleziona la lingua"
+                                data-i18n-aria="index_aria_19">
+                                <i class="bi bi-globe" aria-hidden="true"></i>
+                                <span id="currentLangLabel">IT</span>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-menu-dark glow-border-azure">
+                                <li><button class="dropdown-item" onclick="changeLanguage('it')"
+                                        data-i18n="index_49">Italiano</button></li>
+                                <li><button class="dropdown-item" onclick="changeLanguage('en')"
+                                        data-i18n="index_50">English</button></li>
+                                <li><button class="dropdown-item" onclick="changeLanguage('morse_it')"
+                                        data-i18n="index_51">Morse (IT)</button></li>
+                                <li><button class="dropdown-item" onclick="changeLanguage('morse_en')"
+                                        data-i18n="index_52">Morse (EN)</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-xl-4 order-3 text-center text-xl-end">
+                    <div class="row justify-content-center justify-content-xl-end">
+
+                        <div class="col-12 mb-3">
                             <div
-                                class="social-icons d-flex flex-column flex-md-row justify-content-end align-items-end align-items-md-center gap-2 gap-md-4">
-                                <a href="http://facebook.com/" aria-label="Visita la nostra pagina Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                                <a href="http://youtube.com" aria-label="Guarda i nostri video Youtube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx" aria-label="Seguici su Instagram" target="_blank" rel="noopener noreferrer"><i
-                                        class="bi bi-instagram" aria-hidden="true"></i></a>
-                                <a href="http://twitter.com" aria-label="Leggi i nostri ultimi Tweet" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-                                <a href="http://tiktok.com/" aria-label="Guarda i nostri ultimi trend su TikTok" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+                                class="social-icons d-flex justify-content-center justify-content-xl-end align-items-center gap-5">
+                                <a href="http://facebook.com/" aria-label="Facebook" target="_blank"
+                                    rel="noopener noreferrer" data-i18n-aria="index_aria_20"><i class="bi bi-facebook"
+                                        aria-hidden="true"></i></a>
+                                <a href="http://youtube.com" aria-label="Youtube" target="_blank"
+                                    rel="noopener noreferrer" data-i18n-aria="index_aria_21"><i class="bi bi-youtube"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/elia.guarnieri?igsh=cGk2MWxqZmdjanUx"
+                                    aria-label="Instagram" target="_blank" rel="noopener noreferrer"
+                                    data-i18n-aria="index_aria_22"><i class="bi bi-instagram"
+                                        aria-hidden="true"></i></a>
+                                <a href="http://twitter.com" aria-label="Twitter" target="_blank"
+                                    rel="noopener noreferrer" data-i18n-aria="index_aria_23"><i class="bi bi-twitter-x"
+                                        aria-hidden="true"></i></a>
+                                <a href="http://tiktok.com/" aria-label="TikTok" target="_blank"
+                                    rel="noopener noreferrer" data-i18n-aria="index_aria_24"><i class="bi bi-tiktok"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-6 col-md-12 order-1 order-md-2 text-start text-md-end">
+                        <div class="col-12">
                             <div
-                                class="footer-links d-flex flex-column flex-md-row justify-content-md-end gap-1 gap-md-4 h-100 justify-content-between">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal">Privacy Policy</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal">Terms</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal">Cookie Policy</a>
-                                <a href="info.html">Contact</a>
+                                class="footer-links d-flex flex-wrap justify-content-center justify-content-xl-end gap-3 gap-md-4">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal"
+                                    data-i18n="index_53">Privacy Policy</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal"
+                                    data-i18n="index_54">Terms</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#successModal"
+                                    data-i18n="index_55">Cookie Policy</a>
+                                <a href="info.html" data-i18n="index_56">Contact</a>
                             </div>
                         </div>
 
@@ -606,13 +686,14 @@
 
                 <div class="modal-body text-center d-flex flex-column justify-content-center align-items-center">
 
-                    <h3 class="title-modal-azure">EASTER EGG</h3>
+                    <h3 class="title-modal-azure" data-i18n="index_57">EASTER EGG</h3>
 
-                    <p class="my-m-top-2">
+                    <p class="my-m-top-2" data-i18n="index_58">
                         Questo dovrebbe essere la privacy policy, i termini e il messaggio sui cookies.
                     </p>
 
-                    <button type="button" class="btn-custom-azure my-m-top-1" data-bs-dismiss="modal">
+                    <button type="button" class="btn-custom-azure my-m-top-1" data-bs-dismiss="modal"
+                        data-i18n="index_59">
                         Buona giornata!
                     </button>
 
@@ -644,6 +725,9 @@
 
     <!-- Script for horizontal scroll -->
     <script src="js/horizontal_scroll.js"></script>
+
+    <!-- Script for language switch -->
+    <script src="js/languange_switch.js"></script>
 
     <script>
         // Ensure the DOM is fully loaded before running the script

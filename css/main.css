@@ -610,7 +610,7 @@ canvas {
   color: var(--bs-blue);
   text-decoration: none;
   line-height: 1;
-  padding-left: 2rem;
+  gap: 2rem;
   font-size: 2rem;
   transition: text-shadow 0.3s ease-in-out;
 }
@@ -640,6 +640,31 @@ canvas {
   font-weight: 500;
   margin-top: 1rem;
   opacity: 0.8;
+}
+
+/*---Language-selector---*/
+.btn-lang {
+    color: rgba(var(--bs-white-rgb), 1) !important;
+    background-color: rgba(var(--bs-blue-rgb), 1) !important;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    z-index: 1050;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-lang:hover {
+    color: rgba(var(--bs-white-rgb), 1) !important;
+    box-shadow: 0 0 15px var(--bs-azure, #31DEE5);
+}
+
+.dropdown-menu {
+    left: 50% !important;
+    transform: translateX(-50%) !important; 
+    background-color: #000;
+    border: 1px solid var(--bs-azure, #31DEE5);
+    z-index: 9999;
 }
 
 
