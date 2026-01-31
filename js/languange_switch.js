@@ -29,7 +29,7 @@ const translations = {
         "index_25": "the best final track",
         "index_26": "The menu always offers all the best cutting-edge dishes, excellent value for money. The dessert is a vibrant certainty, a sensory track.",
         "index_45": "book your flavor track",
-        "index_46": "Turn on your sensors and don't just hear about it! Find the frequency, let yourself be transported by the magnetic waves of flavor: the next taste is already ready, recorded like a unique track, and is just waiting for you. Just a click to enter the rhythm of taste. What are you waiting for?",
+        "index_46": "Turn on your sensors and don't just hear about it!<br>Find the frequency, let yourself be transported by the magnetic waves of flavor: the next taste is already ready, recorded like a unique track, and is just waiting for you. Just a click to enter the rhythm of taste. What are you waiting for?",
         "index_47": "Book Now",
         "index_48": "Copyright 2026 Dish-ki S.p.A.",
         "index_49": "Italian",
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         // Save the HTML content into our memory
-        originalTexts[key] = element.textContent;
+        originalTexts[key] = element.innerHTML;
     });
 
     // Save aria-label (Italian)
@@ -246,10 +246,10 @@ function changeLanguage(lang) {
         const key = element.getAttribute('data-i18n');
 
         if (lang === 'it') {
-            if (originalTexts[key]) element.textContent = originalTexts[key];
+            if (originalTexts[key]) element.innerHTML = originalTexts[key];
         } else {
             if (translations[lang] && translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                element.innerHTML = translations[lang][key];
             }
         }
     });
