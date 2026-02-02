@@ -51,3 +51,5 @@ Oltre alla localizzazione, JavaScript è il motore delle interazioni avanzate de
 Al fine di garantire la piena accessibilità del sito e la sua fruibilità tramite tecnologie assistive (come gli screen reader), il markup è stato arricchito con gli attributi ARIA (Accessible Rich Internet Applications) laddove necessari.
 
 Parallelamente, per quanto riguarda l'ottimizzazione per i motori di ricerca (SEO), sono stati implementati tutti gli accorgimenti tecnici fondamentali e i meta-tag essenziali per favorire una corretta indicizzazione dei contenuti.
+
+**In linea con il brief di progetto, la pagina Menu è stata strutturata per riflettere la narrativa del brand, che vanta la collezione di musica gastronomica più vasta dell'universo. Per mantenere questa coerenza, si è deciso di non visualizzare pietanze 'non disponibili' o esaurite. Di conseguenza, l'interazione è focalizzata: cliccando sulle card, l'utente viene reindirizzato esclusivamente alle pagine di dettaglio dei tre piatti d'autore realizzati, corrispondenti ai generi musicali EDM, Pop e Classica.**
