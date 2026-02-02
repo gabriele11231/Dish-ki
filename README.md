@@ -3,6 +3,8 @@ Progetto per il corso universitario di "Comunicazione visiva e design delle inte
 
 Il sito è visionabile al seguente indirizzo [Dish-ki](https://www.dishki.altervista.org/)
 
+Il materiale definitivo prodotto per la realizzazione del sito è visionabile al seguente indirizzo [Wireframe, mockup, moodboard...](https://drive.google.com/drive/folders/1nWBV-TmI8ociJ13KzSe_ChqCbhYNIJmU?usp=sharing)
+
 
 # HTML
 Sfruttando il sistema a griglia e i componenti predefiniti di Bootstrap (come navbar e footer), è stato possibile strutturare velocemente il layout, garantendo un risultato finale altamente fedele ai mockup iniziali.
